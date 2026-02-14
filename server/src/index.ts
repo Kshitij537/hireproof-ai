@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import authRoutes from './routes/auth';
 import analyzeRoutes from './routes/analyze';
+import interviewQuestionsRoutes from './routes/interviewQuestions';
 
 dotenv.config();
 
@@ -17,6 +18,7 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/', analyzeRoutes);
 app.use('/api', analyzeRoutes);
+app.use('/api', interviewQuestionsRoutes);
 
 // Health check
 app.get('/health', (req, res) => {
