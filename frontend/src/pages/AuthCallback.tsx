@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "../lib/supabase";
 import { API } from "../lib/api";
@@ -6,33 +6,45 @@ import { clearAuthSession, setAuthSession, type AuthRole } from "../lib/session"
 
 export default function AuthCallback() {
   const navigate = useNavigate();
+  const handledRef = useRef(false);
 
   useEffect(() => {
+    // Guard against React StrictMode double-execution
+    if (handledRef.current) return;
+    handledRef.current = true;
+
+    // Read role IMMEDIATELY, before any async work
+    const storedRole =
+      localStorage.getItem("hireproof_role") ||
+      localStorage.getItem("oauthRole");
+    const role: AuthRole = storedRole === "candidate" ? "candidate" : "recruiter";
+
+    // Clean up the stored role keys right away
+    localStorage.removeItem("hireproof_role");
+    localStorage.removeItem("oauthRole");
+
     const handleAuthCallback = async () => {
       try {
-        const { data } = await supabase.auth.getSession();
+        // Wait a tick for Supabase to process the URL hash/code
+        const { data, error: sessionError } = await supabase.auth.getSession();
         const session = data.session;
 
-        if (!session?.user?.email) {
+        if (!session?.user?.email || sessionError) {
           clearAuthSession();
           navigate("/", { replace: true });
           return;
         }
 
-        // Read role stored BEFORE OAuth redirect
-        const storedRole = localStorage.getItem("hireproof_role") || localStorage.getItem("oauthRole");
-        const role: AuthRole = storedRole === "candidate" ? "candidate" : "recruiter";
-
-        // Clean up both keys
-        localStorage.removeItem("hireproof_role");
-        localStorage.removeItem("oauthRole");
-
+        // Exchange with backend for app JWT
         const oauthExchange = await fetch(`${API}/api/auth/oauth/login`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             email: session.user.email,
-            name: session.user.user_metadata?.full_name ?? session.user.user_metadata?.name ?? "OAuth User",
+            name:
+              session.user.user_metadata?.full_name ??
+              session.user.user_metadata?.name ??
+              "OAuth User",
             role,
           }),
         });
@@ -46,16 +58,15 @@ export default function AuthCallback() {
         const payload = await oauthExchange.json();
         setAuthSession({
           token: payload.token,
-          role,           // use the role WE chose, not the backend's
+          role,
           user: { ...payload.user, role },
         });
 
         // Role-based redirect
-        if (role === "candidate") {
-          navigate("/candidate/home", { replace: true });
-        } else {
-          navigate("/recruiter/dashboard", { replace: true });
-        }
+        navigate(
+          role === "candidate" ? "/candidate/home" : "/recruiter/dashboard",
+          { replace: true }
+        );
       } catch {
         clearAuthSession();
         navigate("/", { replace: true });
