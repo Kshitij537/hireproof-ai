@@ -8,6 +8,7 @@ import { generateGithubAutomationInsights, generateInsights } from "../services/
 import { fetchGithubData } from "../services/githubService";
 import { calculateScore } from "../services/scoringService";
 import { detectRisks } from "../services/riskAnalyzer";
+import { supabase } from "../lib/supabaseClient";
 
 const router = Router();
 const DB_PATH = path.join(__dirname, "..", "data", "candidates.json");
@@ -75,6 +76,9 @@ function extractGithubUsername(input: string): string | null {
     }
 }
 
+/* ══════════════════════════════════════════
+   POST /analyze — scan a GitHub profile
+   ══════════════════════════════════════════ */
 router.post("/analyze", async (req: Request, res: Response): Promise<void> => {
     try {
         const { url, githubUrl } = req.body as AnalyzeRequestBody;
@@ -186,12 +190,47 @@ router.post("/analyze", async (req: Request, res: Response): Promise<void> => {
             }
         } catch (err) {
             console.error("[analyze] AI generation failed, using defaults:", err);
-            // Fallback is already in report from automated analysis
         }
 
+        // ── Save to JSON file (fallback / local backup) ──
         const candidates = readCandidates();
         candidates.push(report);
         saveCandidates(candidates);
+
+        // ── Save to Supabase ──
+        try {
+            const topSkills = (Object.entries(report.skills) as [string, number][])
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 3)
+                .map(([skill]) => skill);
+
+            const { data: sbRow, error: sbError } = await supabase
+                .from("candidates")
+                .insert({
+                    report_id: report.id,
+                    name: report.name,
+                    github_url: report.profileUrl,
+                    authenticity_score: report.score,
+                    authenticity_level: report.authenticityLevel,
+                    top_skills: topSkills,
+                    repo_count: report.githubMonitoring?.repoCount ?? 0,
+                    followers: report.githubMonitoring?.collaborationScore ?? 0,
+                    report_data: report,
+                })
+                .select()
+                .single();
+
+            if (sbError) {
+                console.error("[analyze] Supabase insert failed:", sbError.message);
+            } else {
+                console.log("[analyze] Saved to Supabase, row id:", sbRow?.id);
+                // Attach the Supabase row id for the frontend
+                (report as any).supabase_id = sbRow?.id;
+            }
+        } catch (sbErr) {
+            console.error("[analyze] Supabase insert error:", sbErr);
+            // Non-fatal — JSON file is the fallback
+        }
 
         res.json(report);
     } catch (error) {
@@ -200,8 +239,29 @@ router.post("/analyze", async (req: Request, res: Response): Promise<void> => {
     }
 });
 
-router.get("/candidate/:id", (req: Request, res: Response): void => {
+/* ══════════════════════════════════════════
+   GET /candidate/:id — single candidate
+   ══════════════════════════════════════════ */
+router.get("/candidate/:id", async (req: Request, res: Response): Promise<void> => {
     const { id } = req.params;
+
+    // Try Supabase first
+    try {
+        const { data, error } = await supabase
+            .from("candidates")
+            .select("report_data")
+            .or(`report_id.eq.${id},id.eq.${id}`)
+            .single();
+
+        if (!error && data?.report_data) {
+            res.json(data.report_data);
+            return;
+        }
+    } catch {
+        // Fall through to JSON file
+    }
+
+    // Fallback: JSON file
     const candidates = readCandidates();
     const candidate = candidates.find((c) => c.id === id);
 
@@ -213,7 +273,26 @@ router.get("/candidate/:id", (req: Request, res: Response): void => {
     res.json(candidate);
 });
 
-router.get("/candidates", (_req: Request, res: Response): void => {
+/* ══════════════════════════════════════════
+   GET /candidates — all candidates
+   ══════════════════════════════════════════ */
+router.get("/candidates", async (_req: Request, res: Response): Promise<void> => {
+    // Try Supabase first
+    try {
+        const { data, error } = await supabase
+            .from("candidates")
+            .select("*")
+            .order("created_at", { ascending: false });
+
+        if (!error && data && data.length > 0) {
+            res.json(data);
+            return;
+        }
+    } catch {
+        // Fall through to JSON file
+    }
+
+    // Fallback: JSON file
     const candidates = readCandidates().slice().reverse();
     res.json(candidates);
 });

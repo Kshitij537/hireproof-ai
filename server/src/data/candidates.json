@@ -1,482 +1,77 @@
 [
   {
-    "id": "f124de9e-8836-45da-8515-1deb7f8caf5f",
-    "name": "torvalds",
-    "github": "https://github.com/torvalds",
-    "score": 100,
-    "authenticityLevel": "High",
+    "id": "26feb037-3a2b-4590-90ca-471e9ff8c315",
+    "name": "PrafulK99 (Praful Kharpuriye) · GitHub",
+    "profileUrl": "https://github.com/PrafulK99",
+    "score": 44,
+    "authenticityLevel": "Low",
     "skills": {
-      "frontend": 0,
-      "backend": 0,
-      "dsa": 5,
-      "system": 3,
-      "testing": 0
+      "frontend": 2,
+      "backend": 1,
+      "dsa": 2,
+      "system": 0,
+      "testing": 3
     },
     "strengths": [
-      "Demonstrates consistent GitHub activity",
-      "Works with multiple programming languages",
-      "Has public projects showcasing practical skills"
+      "frontend signal is strong based on detected technical terms.",
+      "backend appears consistently across analyzed content.",
+      "Profile has enough technical content for evidence-based evaluation.",
+      "PrafulK99 has 12 repos and 83 total commits.",
+      "GitHub monitoring score is 44 (Low).",
+      "Top inferred skills: testing, frontend."
     ],
     "weaknesses": [
-      "Limited evidence of testing practices",
-      "Few collaborative or open-source contributions",
-      "Project documentation could be improved"
+      "system evidence is limited in the analyzed URL content.",
+      "testing indicators are weaker than other technical areas.",
+      "Adding explicit project outcomes and metrics would improve confidence.",
+      "Maintain current commit consistency with monthly quality checkpoints.",
+      "Publish postmortems for complex features to strengthen engineering signal.",
+      "Keep cross-repo reviews active to preserve collaboration momentum."
     ],
     "risks": [
-      "Skill depth hard to verify from repos alone",
-      "May rely on tutorials without original work"
+      "Minimal testing signals detected.",
+      "Possible shallow project depth"
     ],
     "questions": [
-      "Walk me through the architecture of your most complex project.",
-      "How do you approach writing tests for your code?",
-      "Describe a challenging bug you fixed and your debugging process.",
-      "What design patterns have you used and why?",
-      "How do you stay current with new technologies?"
-    ]
+      "How do you structure a large frontend codebase to stay maintainable?",
+      "What tradeoffs do you consider when optimizing rendering performance?",
+      "How would you design an API that remains backward compatible over time?",
+      "How do you handle retries, timeouts, and idempotency in external API calls?",
+      "Walk through a recent technical decision and the alternatives you evaluated.",
+      "How would you automate GitHub activity monitoring for contribution consistency?",
+      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
+    ],
+    "githubMonitoring": {
+      "username": "PrafulK99",
+      "repoCount": 12,
+      "totalCommits": 83,
+      "contributionConsistency": 61,
+      "complexityScore": 89,
+      "collaborationScore": 87,
+      "suggestions": [
+        "Maintain current commit consistency with monthly quality checkpoints.",
+        "Publish postmortems for complex features to strengthen engineering signal.",
+        "Keep cross-repo reviews active to preserve collaboration momentum."
+      ],
+      "automation": [
+        "Run monthly language diversity checks to detect one-dimensional project trends."
+      ],
+      "monitorSummary": [
+        "PrafulK99 has 12 repos and 83 total commits.",
+        "GitHub monitoring score is 44 (Low).",
+        "Top inferred skills: testing, frontend."
+      ]
+    }
   },
   {
-    "id": "f637839e-34de-4179-a90d-2669657052a7",
-    "name": "torvalds",
-    "github": "https://github.com/torvalds",
-    "score": 100,
-    "authenticityLevel": "High",
-    "skills": {
-      "frontend": 0,
-      "backend": 0,
-      "dsa": 5,
-      "system": 3,
-      "testing": 0
-    },
-    "strengths": [
-      "Demonstrates consistent GitHub activity",
-      "Works with multiple programming languages",
-      "Has public projects showcasing practical skills"
-    ],
-    "weaknesses": [
-      "Limited evidence of testing practices",
-      "Few collaborative or open-source contributions",
-      "Project documentation could be improved"
-    ],
-    "risks": [
-      "Skill depth hard to verify from repos alone",
-      "May rely on tutorials without original work"
-    ],
-    "questions": [
-      "Walk me through the architecture of your most complex project.",
-      "How do you approach writing tests for your code?",
-      "Describe a challenging bug you fixed and your debugging process.",
-      "What design patterns have you used and why?",
-      "How do you stay current with new technologies?"
-    ]
-  },
-  {
-    "id": "d2de924c-9df0-4432-8a6f-20611d9bb700",
-    "name": "prafullKas",
-    "github": "https://github.com/prafullKas",
-    "score": 65,
+    "id": "85d7f3a8-1548-46cf-9604-9749f5b75709",
+    "name": "karan4065 (Karan Jadhav) · GitHub",
+    "profileUrl": "https://github.com/karan4065",
+    "score": 47,
     "authenticityLevel": "Medium",
     "skills": {
       "frontend": 3,
       "backend": 1,
-      "dsa": 3,
-      "system": 0,
-      "testing": 8
-    },
-    "strengths": [
-      "Demonstrates consistent GitHub activity",
-      "Works with multiple programming languages",
-      "Has public projects showcasing practical skills"
-    ],
-    "weaknesses": [
-      "Limited evidence of testing practices",
-      "Few collaborative or open-source contributions",
-      "Project documentation could be improved"
-    ],
-    "risks": [
-      "Skill depth hard to verify from repos alone",
-      "May rely on tutorials without original work"
-    ],
-    "questions": [
-      "Walk me through the architecture of your most complex project.",
-      "How do you approach writing tests for your code?",
-      "Describe a challenging bug you fixed and your debugging process.",
-      "What design patterns have you used and why?",
-      "How do you stay current with new technologies?"
-    ]
-  },
-  {
-    "githubUsername": "octocat",
-    "authenticityScore": 52,
-    "skills": {
-      "Python": 96,
-      "DSA": 77,
-      "System Design": 10,
-      "Collaboration": 61
-    },
-    "strengths": [
-      "Consistent commits",
-      "Strong backend focus"
-    ],
-    "weaknesses": [
-      "Limited documentation"
-    ],
-    "riskFlags": [],
-    "interviewQuestions": [
-      "How do you design a scalable REST API for high traffic?",
-      "How would you optimize a slow SQL query in production?",
-      "How do you handle authentication and authorization in Node.js services?",
-      "How do you design retry and timeout strategies for external API calls?",
-      "How do you structure logging and monitoring for backend systems?"
-    ]
-  },
-  {
-    "githubUsername": "octocat",
-    "authenticityScore": 52,
-    "skills": {
-      "Python": 94,
-      "DSA": 95,
-      "System Design": 91,
-      "Collaboration": 61
-    },
-    "strengths": [
-      "Consistent commits",
-      "Strong backend focus"
-    ],
-    "weaknesses": [
-      "Limited documentation"
-    ],
-    "riskFlags": [],
-    "interviewQuestions": [
-      "How do you design a scalable REST API for high traffic?",
-      "How would you optimize a slow SQL query in production?",
-      "How do you handle authentication and authorization in Node.js services?",
-      "How do you design retry and timeout strategies for external API calls?",
-      "How do you structure logging and monitoring for backend systems?"
-    ]
-  },
-  {
-    "id": "b41a8bcd-489e-4232-8c36-c16811546e84",
-    "name": "ParthLonkar (Parth Lonkar) · GitHub",
-    "profileUrl": "https://github.com/ParthLonkar",
-    "score": 15,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 1,
-      "backend": 2,
-      "dsa": 0,
-      "system": 0,
-      "testing": 0
-    },
-    "strengths": [
-      "backend signal is strong based on detected technical terms.",
-      "frontend appears consistently across analyzed content.",
-      "Profile has enough technical content for evidence-based evaluation."
-    ],
-    "weaknesses": [
-      "system evidence is limited in the analyzed URL content.",
-      "testing indicators are weaker than other technical areas.",
-      "Adding explicit project outcomes and metrics would improve confidence."
-    ],
-    "risks": [
-      "Minimal testing signals detected."
-    ],
-    "questions": [
-      "How would you design an API that remains backward compatible over time?",
-      "How do you handle retries, timeouts, and idempotency in external API calls?",
-      "How do you structure a large frontend codebase to stay maintainable?",
-      "What tradeoffs do you consider when optimizing rendering performance?",
-      "Walk through a recent technical decision and the alternatives you evaluated."
-    ]
-  },
-  {
-    "id": "be694493-bb21-4e90-b539-2630527ab840",
-    "name": "PrafulK99 (Praful Kharpuriye) · GitHub",
-    "profileUrl": "https://github.com/PrafulK99",
-    "score": 13,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 2,
-      "backend": 0,
-      "dsa": 0,
-      "system": 0,
-      "testing": 0
-    },
-    "strengths": [
-      "frontend signal is strong based on detected technical terms.",
-      "backend appears consistently across analyzed content.",
-      "Profile has enough technical content for evidence-based evaluation."
-    ],
-    "weaknesses": [
-      "system evidence is limited in the analyzed URL content.",
-      "testing indicators are weaker than other technical areas.",
-      "Adding explicit project outcomes and metrics would improve confidence."
-    ],
-    "risks": [
-      "Minimal testing signals detected."
-    ],
-    "questions": [
-      "How do you structure a large frontend codebase to stay maintainable?",
-      "What tradeoffs do you consider when optimizing rendering performance?",
-      "How would you design an API that remains backward compatible over time?",
-      "How do you handle retries, timeouts, and idempotency in external API calls?",
-      "Walk through a recent technical decision and the alternatives you evaluated."
-    ]
-  },
-  {
-    "id": "bd5ea753-93a9-46fa-8ca0-79328298be07",
-    "name": "Kshitij537 (Kshitij Deshmukh) · GitHub",
-    "profileUrl": "https://github.com/Kshitij537",
-    "score": 16,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 2,
-      "backend": 2,
-      "dsa": 0,
-      "system": 0,
-      "testing": 0
-    },
-    "strengths": [
-      "frontend signal is strong based on detected technical terms.",
-      "backend appears consistently across analyzed content.",
-      "Profile has enough technical content for evidence-based evaluation."
-    ],
-    "weaknesses": [
-      "system evidence is limited in the analyzed URL content.",
-      "testing indicators are weaker than other technical areas.",
-      "Adding explicit project outcomes and metrics would improve confidence."
-    ],
-    "risks": [
-      "Minimal testing signals detected."
-    ],
-    "questions": [
-      "How do you structure a large frontend codebase to stay maintainable?",
-      "What tradeoffs do you consider when optimizing rendering performance?",
-      "How would you design an API that remains backward compatible over time?",
-      "How do you handle retries, timeouts, and idempotency in external API calls?",
-      "Walk through a recent technical decision and the alternatives you evaluated."
-    ]
-  },
-  {
-    "id": "a7ea8a5a-79aa-48cd-a024-fee1bb18ad16",
-    "name": "atharva1304 (Atharva Kamde) · GitHub",
-    "profileUrl": "https://github.com/atharva1304",
-    "score": 12,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 0,
-      "backend": 1,
-      "dsa": 0,
-      "system": 0,
-      "testing": 0
-    },
-    "strengths": [
-      "backend signal is strong based on detected technical terms.",
-      "frontend appears consistently across analyzed content.",
-      "Profile has enough technical content for evidence-based evaluation."
-    ],
-    "weaknesses": [
-      "system evidence is limited in the analyzed URL content.",
-      "testing indicators are weaker than other technical areas.",
-      "Adding explicit project outcomes and metrics would improve confidence."
-    ],
-    "risks": [
-      "Minimal testing signals detected."
-    ],
-    "questions": [
-      "How would you design an API that remains backward compatible over time?",
-      "How do you handle retries, timeouts, and idempotency in external API calls?",
-      "How do you structure a large frontend codebase to stay maintainable?",
-      "What tradeoffs do you consider when optimizing rendering performance?",
-      "Walk through a recent technical decision and the alternatives you evaluated."
-    ]
-  },
-  {
-    "id": "ae2a6951-cc8d-41d5-9e35-6d8b8c999e22",
-    "name": "ParthLonkar (Parth Lonkar) · GitHub",
-    "profileUrl": "https://github.com/ParthLonkar",
-    "score": 15,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 1,
-      "backend": 2,
-      "dsa": 0,
-      "system": 0,
-      "testing": 0
-    },
-    "strengths": [
-      "backend signal is strong based on detected technical terms.",
-      "frontend appears consistently across analyzed content.",
-      "Profile has enough technical content for evidence-based evaluation."
-    ],
-    "weaknesses": [
-      "system evidence is limited in the analyzed URL content.",
-      "testing indicators are weaker than other technical areas.",
-      "Adding explicit project outcomes and metrics would improve confidence."
-    ],
-    "risks": [
-      "Minimal testing signals detected."
-    ],
-    "questions": [
-      "How would you design an API that remains backward compatible over time?",
-      "How do you handle retries, timeouts, and idempotency in external API calls?",
-      "How do you structure a large frontend codebase to stay maintainable?",
-      "What tradeoffs do you consider when optimizing rendering performance?",
-      "Walk through a recent technical decision and the alternatives you evaluated."
-    ]
-  },
-  {
-    "id": "1bd165ac-735d-4f93-ab0e-3d5a6025c94e",
-    "name": "ParthLonkar (Parth Lonkar) · GitHub",
-    "profileUrl": "https://github.com/ParthLonkar",
-    "score": 15,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 1,
-      "backend": 2,
-      "dsa": 0,
-      "system": 0,
-      "testing": 0
-    },
-    "strengths": [
-      "Active GitHub contributions"
-    ],
-    "weaknesses": [
-      "Limited test coverage"
-    ],
-    "risks": [
-      "Possible shallow project depth"
-    ],
-    "questions": [
-      "Explain your most complex project in detail"
-    ]
-  },
-  {
-    "id": "e5057673-ac91-482e-9504-7190d8b59023",
-    "name": "PrafulK99 (Praful Kharpuriye) · GitHub",
-    "profileUrl": "https://github.com/PrafulK99",
-    "score": 13,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 2,
-      "backend": 0,
-      "dsa": 0,
-      "system": 0,
-      "testing": 0
-    },
-    "strengths": [
-      "Active GitHub contributions"
-    ],
-    "weaknesses": [
-      "Limited test coverage"
-    ],
-    "risks": [
-      "Possible shallow project depth"
-    ],
-    "questions": [
-      "Explain your most complex project in detail"
-    ]
-  },
-  {
-    "id": "af99bb0d-1d4a-4367-ada2-bd1d482baf43",
-    "name": "ParthLonkar (Parth Lonkar) · GitHub",
-    "profileUrl": "https://github.com/ParthLonkar",
-    "score": 15,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 1,
-      "backend": 2,
-      "dsa": 0,
-      "system": 0,
-      "testing": 0
-    },
-    "strengths": [
-      "Active GitHub contributions"
-    ],
-    "weaknesses": [
-      "Limited test coverage"
-    ],
-    "risks": [
-      "Possible shallow project depth"
-    ],
-    "questions": [
-      "Explain your most complex project in detail"
-    ]
-  },
-  {
-    "id": "8db24fd7-28c9-409e-88ea-506d6d8178d1",
-    "name": "ParthLonkar (Parth Lonkar) · GitHub",
-    "profileUrl": "https://github.com/ParthLonkar",
-    "score": 42,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 1,
-      "backend": 2,
-      "dsa": 2,
-      "system": 0,
-      "testing": 3
-    },
-    "strengths": [
-      "backend signal is strong based on detected technical terms.",
-      "frontend appears consistently across analyzed content.",
-      "Profile has enough technical content for evidence-based evaluation.",
-      "ParthLonkar has 14 repos and 97 total commits.",
-      "GitHub monitoring score is 42 (Low).",
-      "Top inferred skills: testing, backend."
-    ],
-    "weaknesses": [
-      "system evidence is limited in the analyzed URL content.",
-      "testing indicators are weaker than other technical areas.",
-      "Adding explicit project outcomes and metrics would improve confidence.",
-      "Maintain current commit consistency with monthly quality checkpoints.",
-      "Add one architecture-focused repo with README decisions and tradeoffs.",
-      "Increase PR review activity to improve collaboration evidence."
-    ],
-    "risks": [
-      "Minimal testing signals detected.",
-      "Possible shallow project depth"
-    ],
-    "questions": [
-      "How would you design an API that remains backward compatible over time?",
-      "How do you handle retries, timeouts, and idempotency in external API calls?",
-      "How do you structure a large frontend codebase to stay maintainable?",
-      "What tradeoffs do you consider when optimizing rendering performance?",
-      "Walk through a recent technical decision and the alternatives you evaluated.",
-      "How would you automate GitHub activity monitoring for contribution consistency?",
-      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
-    ],
-    "githubMonitoring": {
-      "username": "ParthLonkar",
-      "repoCount": 14,
-      "totalCommits": 97,
-      "contributionConsistency": 79,
-      "complexityScore": 56,
-      "collaborationScore": 48,
-      "suggestions": [
-        "Maintain current commit consistency with monthly quality checkpoints.",
-        "Add one architecture-focused repo with README decisions and tradeoffs.",
-        "Increase PR review activity to improve collaboration evidence."
-      ],
-      "automation": [
-        "Auto-detect repos missing architecture docs and open reminder tasks.",
-        "Track PR comments/reviews per week and surface low-engagement alerts.",
-        "Run monthly language diversity checks to detect one-dimensional project trends."
-      ],
-      "monitorSummary": [
-        "ParthLonkar has 14 repos and 97 total commits.",
-        "GitHub monitoring score is 42 (Low).",
-        "Top inferred skills: testing, backend."
-      ]
-    }
-  },
-  {
-    "id": "7cd44ad8-ab62-4d16-8751-429971c13e42",
-    "name": "PrafulK99 (Praful Kharpuriye) · GitHub",
-    "profileUrl": "https://github.com/PrafulK99",
-    "score": 44,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 2,
-      "backend": 1,
       "dsa": 2,
       "system": 0,
       "testing": 3
@@ -485,9 +80,9 @@
       "frontend signal is strong based on detected technical terms.",
       "backend appears consistently across analyzed content.",
       "Profile has enough technical content for evidence-based evaluation.",
-      "PrafulK99 has 12 repos and 83 total commits.",
-      "GitHub monitoring score is 44 (Low).",
-      "Top inferred skills: testing, frontend."
+      "karan4065 has 12 repos and 83 total commits.",
+      "GitHub monitoring score is 47 (Medium).",
+      "Top inferred skills: frontend, testing."
     ],
     "weaknesses": [
       "system evidence is limited in the analyzed URL content.",
@@ -511,7 +106,7 @@
       "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
     ],
     "githubMonitoring": {
-      "username": "PrafulK99",
+      "username": "karan4065",
       "repoCount": 12,
       "totalCommits": 83,
       "contributionConsistency": 61,
@@ -526,149 +121,17 @@
         "Run monthly language diversity checks to detect one-dimensional project trends."
       ],
       "monitorSummary": [
-        "PrafulK99 has 12 repos and 83 total commits.",
-        "GitHub monitoring score is 44 (Low).",
-        "Top inferred skills: testing, frontend."
+        "karan4065 has 12 repos and 83 total commits.",
+        "GitHub monitoring score is 47 (Medium).",
+        "Top inferred skills: frontend, testing."
       ]
     }
   },
   {
-    "id": "c4e458f3-5596-46d2-ac86-fbb4048c0488",
-    "name": "ParthLonkar (Parth Lonkar) · GitHub",
-    "profileUrl": "https://github.com/ParthLonkar",
-    "score": 42,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 1,
-      "backend": 2,
-      "dsa": 2,
-      "system": 0,
-      "testing": 3
-    },
-    "strengths": [
-      "backend signal is strong based on detected technical terms.",
-      "frontend appears consistently across analyzed content.",
-      "Profile has enough technical content for evidence-based evaluation.",
-      "ParthLonkar has 14 repos and 97 total commits.",
-      "GitHub monitoring score is 42 (Low).",
-      "Top inferred skills: testing, backend."
-    ],
-    "weaknesses": [
-      "system evidence is limited in the analyzed URL content.",
-      "testing indicators are weaker than other technical areas.",
-      "Adding explicit project outcomes and metrics would improve confidence.",
-      "Maintain current commit consistency with monthly quality checkpoints.",
-      "Add one architecture-focused repo with README decisions and tradeoffs.",
-      "Increase PR review activity to improve collaboration evidence."
-    ],
-    "risks": [
-      "Minimal testing signals detected.",
-      "Possible shallow project depth"
-    ],
-    "questions": [
-      "How would you design an API that remains backward compatible over time?",
-      "How do you handle retries, timeouts, and idempotency in external API calls?",
-      "How do you structure a large frontend codebase to stay maintainable?",
-      "What tradeoffs do you consider when optimizing rendering performance?",
-      "Walk through a recent technical decision and the alternatives you evaluated.",
-      "How would you automate GitHub activity monitoring for contribution consistency?",
-      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
-    ],
-    "githubMonitoring": {
-      "username": "ParthLonkar",
-      "repoCount": 14,
-      "totalCommits": 97,
-      "contributionConsistency": 79,
-      "complexityScore": 56,
-      "collaborationScore": 48,
-      "suggestions": [
-        "Maintain current commit consistency with monthly quality checkpoints.",
-        "Add one architecture-focused repo with README decisions and tradeoffs.",
-        "Increase PR review activity to improve collaboration evidence."
-      ],
-      "automation": [
-        "Auto-detect repos missing architecture docs and open reminder tasks.",
-        "Track PR comments/reviews per week and surface low-engagement alerts.",
-        "Run monthly language diversity checks to detect one-dimensional project trends."
-      ],
-      "monitorSummary": [
-        "ParthLonkar has 14 repos and 97 total commits.",
-        "GitHub monitoring score is 42 (Low).",
-        "Top inferred skills: testing, backend."
-      ]
-    }
-  },
-  {
-    "id": "9e3b2b14-5dac-4fc8-97ef-2f1e5cd78901",
-    "name": "ParthLonkar (Parth Lonkar) · GitHub",
-    "profileUrl": "https://github.com/ParthLonkar",
-    "score": 42,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 1,
-      "backend": 2,
-      "dsa": 2,
-      "system": 0,
-      "testing": 3
-    },
-    "strengths": [
-      "backend signal is strong based on detected technical terms.",
-      "frontend appears consistently across analyzed content.",
-      "Profile has enough technical content for evidence-based evaluation.",
-      "ParthLonkar has 14 repos and 97 total commits.",
-      "GitHub monitoring score is 42 (Low).",
-      "Top inferred skills: testing, backend."
-    ],
-    "weaknesses": [
-      "system evidence is limited in the analyzed URL content.",
-      "testing indicators are weaker than other technical areas.",
-      "Adding explicit project outcomes and metrics would improve confidence.",
-      "Maintain current commit consistency with monthly quality checkpoints.",
-      "Add one architecture-focused repo with README decisions and tradeoffs.",
-      "Increase PR review activity to improve collaboration evidence."
-    ],
-    "risks": [
-      "Minimal testing signals detected.",
-      "Possible shallow project depth"
-    ],
-    "questions": [
-      "How would you design an API that remains backward compatible over time?",
-      "How do you handle retries, timeouts, and idempotency in external API calls?",
-      "How do you structure a large frontend codebase to stay maintainable?",
-      "What tradeoffs do you consider when optimizing rendering performance?",
-      "Walk through a recent technical decision and the alternatives you evaluated.",
-      "How would you automate GitHub activity monitoring for contribution consistency?",
-      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
-    ],
-    "githubMonitoring": {
-      "username": "ParthLonkar",
-      "repoCount": 14,
-      "totalCommits": 97,
-      "contributionConsistency": 79,
-      "complexityScore": 56,
-      "collaborationScore": 48,
-      "suggestions": [
-        "Maintain current commit consistency with monthly quality checkpoints.",
-        "Add one architecture-focused repo with README decisions and tradeoffs.",
-        "Increase PR review activity to improve collaboration evidence."
-      ],
-      "automation": [
-        "Auto-detect repos missing architecture docs and open reminder tasks.",
-        "Track PR comments/reviews per week and surface low-engagement alerts.",
-        "Run monthly language diversity checks to detect one-dimensional project trends."
-      ],
-      "monitorSummary": [
-        "ParthLonkar has 14 repos and 97 total commits.",
-        "GitHub monitoring score is 42 (Low).",
-        "Top inferred skills: testing, backend."
-      ]
-    }
-  },
-  {
-    "id": "6d2e8c18-a8fc-40a7-8fda-72ec334aacb3",
-    "name": "PrafulK99 (Praful Kharpuriye) · GitHub",
-    "profileUrl": "https://github.com/PrafulK99",
-    "score": 44,
+    "id": "69f9c2ed-4f10-4041-baf8-2d66929e42a8",
+    "name": "Anshu926 (Anshu Bongade) · GitHub",
+    "profileUrl": "https://github.com/anshu926",
+    "score": 41,
     "authenticityLevel": "Low",
     "skills": {
       "frontend": 2,
@@ -681,8 +144,8 @@
       "frontend signal is strong based on detected technical terms.",
       "backend appears consistently across analyzed content.",
       "Profile has enough technical content for evidence-based evaluation.",
-      "PrafulK99 has 12 repos and 83 total commits.",
-      "GitHub monitoring score is 44 (Low).",
+      "anshu926 has 11 repos and 76 total commits.",
+      "GitHub monitoring score is 41 (Low).",
       "Top inferred skills: testing, frontend."
     ],
     "weaknesses": [
@@ -707,71 +170,7 @@
       "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
     ],
     "githubMonitoring": {
-      "username": "PrafulK99",
-      "repoCount": 12,
-      "totalCommits": 83,
-      "contributionConsistency": 61,
-      "complexityScore": 89,
-      "collaborationScore": 87,
-      "suggestions": [
-        "Maintain current commit consistency with monthly quality checkpoints.",
-        "Publish postmortems for complex features to strengthen engineering signal.",
-        "Keep cross-repo reviews active to preserve collaboration momentum."
-      ],
-      "automation": [
-        "Run monthly language diversity checks to detect one-dimensional project trends."
-      ],
-      "monitorSummary": [
-        "PrafulK99 has 12 repos and 83 total commits.",
-        "GitHub monitoring score is 44 (Low).",
-        "Top inferred skills: testing, frontend."
-      ]
-    }
-  },
-  {
-    "id": "c06dcd19-87a5-4d32-9e4a-1254791d10db",
-    "name": "tsahil01 (Sahil Tiwaskar) · GitHub",
-    "profileUrl": "https://github.com/tsahil01",
-    "score": 40,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 2,
-      "backend": 1,
-      "dsa": 2,
-      "system": 0,
-      "testing": 3
-    },
-    "strengths": [
-      "frontend signal is strong based on detected technical terms.",
-      "backend appears consistently across analyzed content.",
-      "Profile has enough technical content for evidence-based evaluation.",
-      "tsahil01 has 11 repos and 76 total commits.",
-      "GitHub monitoring score is 40 (Low).",
-      "Top inferred skills: testing, frontend."
-    ],
-    "weaknesses": [
-      "system evidence is limited in the analyzed URL content.",
-      "testing indicators are weaker than other technical areas.",
-      "Adding explicit project outcomes and metrics would improve confidence.",
-      "Maintain current commit consistency with monthly quality checkpoints.",
-      "Publish postmortems for complex features to strengthen engineering signal.",
-      "Keep cross-repo reviews active to preserve collaboration momentum."
-    ],
-    "risks": [
-      "Minimal testing signals detected.",
-      "Possible shallow project depth"
-    ],
-    "questions": [
-      "How do you structure a large frontend codebase to stay maintainable?",
-      "What tradeoffs do you consider when optimizing rendering performance?",
-      "How would you design an API that remains backward compatible over time?",
-      "How do you handle retries, timeouts, and idempotency in external API calls?",
-      "Walk through a recent technical decision and the alternatives you evaluated.",
-      "How would you automate GitHub activity monitoring for contribution consistency?",
-      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
-    ],
-    "githubMonitoring": {
-      "username": "tsahil01",
+      "username": "anshu926",
       "repoCount": 11,
       "totalCommits": 76,
       "contributionConsistency": 52,
@@ -786,81 +185,17 @@
         "Run monthly language diversity checks to detect one-dimensional project trends."
       ],
       "monitorSummary": [
-        "tsahil01 has 11 repos and 76 total commits.",
-        "GitHub monitoring score is 40 (Low).",
+        "anshu926 has 11 repos and 76 total commits.",
+        "GitHub monitoring score is 41 (Low).",
         "Top inferred skills: testing, frontend."
       ]
     }
   },
   {
-    "id": "f3240c40-f106-4b84-84e4-2abdcaa00be7",
-    "name": "PrafulK99 (Praful Kharpuriye) · GitHub",
-    "profileUrl": "https://github.com/PrafulK99",
-    "score": 44,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 2,
-      "backend": 1,
-      "dsa": 2,
-      "system": 0,
-      "testing": 3
-    },
-    "strengths": [
-      "frontend signal is strong based on detected technical terms.",
-      "backend appears consistently across analyzed content.",
-      "Profile has enough technical content for evidence-based evaluation.",
-      "PrafulK99 has 12 repos and 83 total commits.",
-      "GitHub monitoring score is 44 (Low).",
-      "Top inferred skills: testing, frontend."
-    ],
-    "weaknesses": [
-      "system evidence is limited in the analyzed URL content.",
-      "testing indicators are weaker than other technical areas.",
-      "Adding explicit project outcomes and metrics would improve confidence.",
-      "Maintain current commit consistency with monthly quality checkpoints.",
-      "Publish postmortems for complex features to strengthen engineering signal.",
-      "Keep cross-repo reviews active to preserve collaboration momentum."
-    ],
-    "risks": [
-      "Minimal testing signals detected.",
-      "Possible shallow project depth"
-    ],
-    "questions": [
-      "How do you structure a large frontend codebase to stay maintainable?",
-      "What tradeoffs do you consider when optimizing rendering performance?",
-      "How would you design an API that remains backward compatible over time?",
-      "How do you handle retries, timeouts, and idempotency in external API calls?",
-      "Walk through a recent technical decision and the alternatives you evaluated.",
-      "How would you automate GitHub activity monitoring for contribution consistency?",
-      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
-    ],
-    "githubMonitoring": {
-      "username": "PrafulK99",
-      "repoCount": 12,
-      "totalCommits": 83,
-      "contributionConsistency": 61,
-      "complexityScore": 89,
-      "collaborationScore": 87,
-      "suggestions": [
-        "Maintain current commit consistency with monthly quality checkpoints.",
-        "Publish postmortems for complex features to strengthen engineering signal.",
-        "Keep cross-repo reviews active to preserve collaboration momentum."
-      ],
-      "automation": [
-        "Run monthly language diversity checks to detect one-dimensional project trends."
-      ],
-      "monitorSummary": [
-        "PrafulK99 has 12 repos and 83 total commits.",
-        "GitHub monitoring score is 44 (Low).",
-        "Top inferred skills: testing, frontend."
-      ]
-    }
-  },
-  {
-    "id": "cb3c24d9-d6fd-4b35-955e-7585694b7fc8",
-    "name": "torvalds (Linus Torvalds) · GitHub",
-    "profileUrl": "https://github.com/torvalds",
-    "score": 38,
+    "id": "a0884a6d-5598-4aee-a649-d3931410be6a",
+    "name": "Profile",
+    "profileUrl": "https://github.com/Prafurtyry",
+    "score": 29,
     "authenticityLevel": "Low",
     "skills": {
       "frontend": 1,
@@ -872,649 +207,9 @@
     "strengths": [
       "frontend signal is strong based on detected technical terms.",
       "backend appears consistently across analyzed content.",
-      "Profile has enough technical content for evidence-based evaluation.",
-      "torvalds has 11 repos and 76 total commits.",
-      "GitHub monitoring score is 38 (Low).",
-      "Top inferred skills: testing, dsa."
-    ],
-    "weaknesses": [
-      "system evidence is limited in the analyzed URL content.",
-      "testing indicators are weaker than other technical areas.",
-      "Adding explicit project outcomes and metrics would improve confidence.",
-      "Maintain current commit consistency with monthly quality checkpoints.",
-      "Publish postmortems for complex features to strengthen engineering signal.",
-      "Keep cross-repo reviews active to preserve collaboration momentum."
-    ],
-    "risks": [
-      "Minimal testing signals detected.",
-      "Possible shallow project depth"
-    ],
-    "questions": [
-      "How do you structure a large frontend codebase to stay maintainable?",
-      "What tradeoffs do you consider when optimizing rendering performance?",
-      "How would you design an API that remains backward compatible over time?",
-      "How do you handle retries, timeouts, and idempotency in external API calls?",
-      "Walk through a recent technical decision and the alternatives you evaluated.",
-      "How would you automate GitHub activity monitoring for contribution consistency?",
-      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
-    ],
-    "githubMonitoring": {
-      "username": "torvalds",
-      "repoCount": 11,
-      "totalCommits": 76,
-      "contributionConsistency": 52,
-      "complexityScore": 78,
-      "collaborationScore": 74,
-      "suggestions": [
-        "Maintain current commit consistency with monthly quality checkpoints.",
-        "Publish postmortems for complex features to strengthen engineering signal.",
-        "Keep cross-repo reviews active to preserve collaboration momentum."
-      ],
-      "automation": [
-        "Run monthly language diversity checks to detect one-dimensional project trends."
-      ],
-      "monitorSummary": [
-        "torvalds has 11 repos and 76 total commits.",
-        "GitHub monitoring score is 38 (Low).",
-        "Top inferred skills: testing, dsa."
-      ]
-    }
-  },
-  {
-    "id": "e65cb6a8-9dfe-4f19-9c47-e59b83ed5532",
-    "name": "PrafulK99 (Praful Kharpuriye) · GitHub",
-    "profileUrl": "https://github.com/PrafulK99",
-    "score": 44,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 2,
-      "backend": 1,
-      "dsa": 2,
-      "system": 0,
-      "testing": 3
-    },
-    "strengths": [
-      "frontend signal is strong based on detected technical terms.",
-      "backend appears consistently across analyzed content.",
-      "Profile has enough technical content for evidence-based evaluation.",
-      "PrafulK99 has 12 repos and 83 total commits.",
-      "GitHub monitoring score is 44 (Low).",
-      "Top inferred skills: testing, frontend."
-    ],
-    "weaknesses": [
-      "system evidence is limited in the analyzed URL content.",
-      "testing indicators are weaker than other technical areas.",
-      "Adding explicit project outcomes and metrics would improve confidence.",
-      "Maintain current commit consistency with monthly quality checkpoints.",
-      "Publish postmortems for complex features to strengthen engineering signal.",
-      "Keep cross-repo reviews active to preserve collaboration momentum."
-    ],
-    "risks": [
-      "Minimal testing signals detected.",
-      "Possible shallow project depth"
-    ],
-    "questions": [
-      "How do you structure a large frontend codebase to stay maintainable?",
-      "What tradeoffs do you consider when optimizing rendering performance?",
-      "How would you design an API that remains backward compatible over time?",
-      "How do you handle retries, timeouts, and idempotency in external API calls?",
-      "Walk through a recent technical decision and the alternatives you evaluated.",
-      "How would you automate GitHub activity monitoring for contribution consistency?",
-      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
-    ],
-    "githubMonitoring": {
-      "username": "PrafulK99",
-      "repoCount": 12,
-      "totalCommits": 83,
-      "contributionConsistency": 61,
-      "complexityScore": 89,
-      "collaborationScore": 87,
-      "suggestions": [
-        "Maintain current commit consistency with monthly quality checkpoints.",
-        "Publish postmortems for complex features to strengthen engineering signal.",
-        "Keep cross-repo reviews active to preserve collaboration momentum."
-      ],
-      "automation": [
-        "Run monthly language diversity checks to detect one-dimensional project trends."
-      ],
-      "monitorSummary": [
-        "PrafulK99 has 12 repos and 83 total commits.",
-        "GitHub monitoring score is 44 (Low).",
-        "Top inferred skills: testing, frontend."
-      ]
-    }
-  },
-  {
-    "id": "88ecc8d4-d648-4dbc-a589-dda7a3d0b83b",
-    "name": "torvalds (Linus Torvalds) · GitHub",
-    "profileUrl": "https://github.com/torvalds",
-    "score": 38,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 1,
-      "backend": 1,
-      "dsa": 2,
-      "system": 0,
-      "testing": 3
-    },
-    "strengths": [
-      "frontend signal is strong based on detected technical terms.",
-      "backend appears consistently across analyzed content.",
-      "Profile has enough technical content for evidence-based evaluation.",
-      "torvalds has 11 repos and 76 total commits.",
-      "GitHub monitoring score is 38 (Low).",
-      "Top inferred skills: testing, dsa."
-    ],
-    "weaknesses": [
-      "system evidence is limited in the analyzed URL content.",
-      "testing indicators are weaker than other technical areas.",
-      "Adding explicit project outcomes and metrics would improve confidence.",
-      "Maintain current commit consistency with monthly quality checkpoints.",
-      "Publish postmortems for complex features to strengthen engineering signal.",
-      "Keep cross-repo reviews active to preserve collaboration momentum."
-    ],
-    "risks": [
-      "Minimal testing signals detected.",
-      "Possible shallow project depth"
-    ],
-    "questions": [
-      "How do you structure a large frontend codebase to stay maintainable?",
-      "What tradeoffs do you consider when optimizing rendering performance?",
-      "How would you design an API that remains backward compatible over time?",
-      "How do you handle retries, timeouts, and idempotency in external API calls?",
-      "Walk through a recent technical decision and the alternatives you evaluated.",
-      "How would you automate GitHub activity monitoring for contribution consistency?",
-      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
-    ],
-    "githubMonitoring": {
-      "username": "torvalds",
-      "repoCount": 11,
-      "totalCommits": 76,
-      "contributionConsistency": 52,
-      "complexityScore": 78,
-      "collaborationScore": 74,
-      "suggestions": [
-        "Maintain current commit consistency with monthly quality checkpoints.",
-        "Publish postmortems for complex features to strengthen engineering signal.",
-        "Keep cross-repo reviews active to preserve collaboration momentum."
-      ],
-      "automation": [
-        "Run monthly language diversity checks to detect one-dimensional project trends."
-      ],
-      "monitorSummary": [
-        "torvalds has 11 repos and 76 total commits.",
-        "GitHub monitoring score is 38 (Low).",
-        "Top inferred skills: testing, dsa."
-      ]
-    }
-  },
-  {
-    "id": "564a18fb-8f2f-4f60-9f2d-bb6f930b2233",
-    "name": "torvalds (Linus Torvalds) · GitHub",
-    "profileUrl": "https://github.com/torvalds",
-    "score": 38,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 1,
-      "backend": 1,
-      "dsa": 2,
-      "system": 0,
-      "testing": 3
-    },
-    "strengths": [
-      "frontend signal is strong based on detected technical terms.",
-      "backend appears consistently across analyzed content.",
-      "Profile has enough technical content for evidence-based evaluation.",
-      "torvalds has 11 repos and 76 total commits.",
-      "GitHub monitoring score is 38 (Low).",
-      "Top inferred skills: testing, dsa."
-    ],
-    "weaknesses": [
-      "system evidence is limited in the analyzed URL content.",
-      "testing indicators are weaker than other technical areas.",
-      "Adding explicit project outcomes and metrics would improve confidence.",
-      "Maintain current commit consistency with monthly quality checkpoints.",
-      "Publish postmortems for complex features to strengthen engineering signal.",
-      "Keep cross-repo reviews active to preserve collaboration momentum."
-    ],
-    "risks": [
-      "Minimal testing signals detected.",
-      "Possible shallow project depth"
-    ],
-    "questions": [
-      "How do you structure a large frontend codebase to stay maintainable?",
-      "What tradeoffs do you consider when optimizing rendering performance?",
-      "How would you design an API that remains backward compatible over time?",
-      "How do you handle retries, timeouts, and idempotency in external API calls?",
-      "Walk through a recent technical decision and the alternatives you evaluated.",
-      "How would you automate GitHub activity monitoring for contribution consistency?",
-      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
-    ],
-    "githubMonitoring": {
-      "username": "torvalds",
-      "repoCount": 11,
-      "totalCommits": 76,
-      "contributionConsistency": 52,
-      "complexityScore": 78,
-      "collaborationScore": 74,
-      "suggestions": [
-        "Maintain current commit consistency with monthly quality checkpoints.",
-        "Publish postmortems for complex features to strengthen engineering signal.",
-        "Keep cross-repo reviews active to preserve collaboration momentum."
-      ],
-      "automation": [
-        "Run monthly language diversity checks to detect one-dimensional project trends."
-      ],
-      "monitorSummary": [
-        "torvalds has 11 repos and 76 total commits.",
-        "GitHub monitoring score is 38 (Low).",
-        "Top inferred skills: testing, dsa."
-      ]
-    }
-  },
-  {
-    "id": "6c93853c-a3ea-4b29-9bf9-bee2a788d923",
-    "name": "PrafulK99 (Praful Kharpuriye) · GitHub",
-    "profileUrl": "https://github.com/PrafulK99",
-    "score": 44,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 2,
-      "backend": 1,
-      "dsa": 2,
-      "system": 0,
-      "testing": 3
-    },
-    "strengths": [
-      "frontend signal is strong based on detected technical terms.",
-      "backend appears consistently across analyzed content.",
-      "Profile has enough technical content for evidence-based evaluation.",
-      "PrafulK99 has 12 repos and 83 total commits.",
-      "GitHub monitoring score is 44 (Low).",
-      "Top inferred skills: testing, frontend."
-    ],
-    "weaknesses": [
-      "system evidence is limited in the analyzed URL content.",
-      "testing indicators are weaker than other technical areas.",
-      "Adding explicit project outcomes and metrics would improve confidence.",
-      "Maintain current commit consistency with monthly quality checkpoints.",
-      "Publish postmortems for complex features to strengthen engineering signal.",
-      "Keep cross-repo reviews active to preserve collaboration momentum."
-    ],
-    "risks": [
-      "Minimal testing signals detected.",
-      "Possible shallow project depth"
-    ],
-    "questions": [
-      "How do you structure a large frontend codebase to stay maintainable?",
-      "What tradeoffs do you consider when optimizing rendering performance?",
-      "How would you design an API that remains backward compatible over time?",
-      "How do you handle retries, timeouts, and idempotency in external API calls?",
-      "Walk through a recent technical decision and the alternatives you evaluated.",
-      "How would you automate GitHub activity monitoring for contribution consistency?",
-      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
-    ],
-    "githubMonitoring": {
-      "username": "PrafulK99",
-      "repoCount": 12,
-      "totalCommits": 83,
-      "contributionConsistency": 61,
-      "complexityScore": 89,
-      "collaborationScore": 87,
-      "suggestions": [
-        "Maintain current commit consistency with monthly quality checkpoints.",
-        "Publish postmortems for complex features to strengthen engineering signal.",
-        "Keep cross-repo reviews active to preserve collaboration momentum."
-      ],
-      "automation": [
-        "Run monthly language diversity checks to detect one-dimensional project trends."
-      ],
-      "monitorSummary": [
-        "PrafulK99 has 12 repos and 83 total commits.",
-        "GitHub monitoring score is 44 (Low).",
-        "Top inferred skills: testing, frontend."
-      ]
-    }
-  },
-  {
-    "id": "f76c3c28-97db-40db-804e-c4716b6b733c",
-    "name": "GitHub",
-    "profileUrl": "https://github.com/PrafulK99/hireproof-ai",
-    "score": 44,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 1,
-      "backend": 1,
-      "dsa": 2,
-      "system": 0,
-      "testing": 3
-    },
-    "strengths": [
-      "frontend signal is strong based on detected technical terms.",
-      "backend appears consistently across analyzed content.",
-      "Profile has enough technical content for evidence-based evaluation.",
-      "PrafulK99 has 12 repos and 83 total commits.",
-      "GitHub monitoring score is 44 (Low).",
-      "Top inferred skills: testing, dsa."
-    ],
-    "weaknesses": [
-      "system evidence is limited in the analyzed URL content.",
-      "testing indicators are weaker than other technical areas.",
-      "Adding explicit project outcomes and metrics would improve confidence.",
-      "Maintain current commit consistency with monthly quality checkpoints.",
-      "Publish postmortems for complex features to strengthen engineering signal.",
-      "Keep cross-repo reviews active to preserve collaboration momentum."
-    ],
-    "risks": [
-      "Minimal testing signals detected.",
-      "Possible shallow project depth"
-    ],
-    "questions": [
-      "How do you structure a large frontend codebase to stay maintainable?",
-      "What tradeoffs do you consider when optimizing rendering performance?",
-      "How would you design an API that remains backward compatible over time?",
-      "How do you handle retries, timeouts, and idempotency in external API calls?",
-      "Walk through a recent technical decision and the alternatives you evaluated.",
-      "How would you automate GitHub activity monitoring for contribution consistency?",
-      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
-    ],
-    "githubMonitoring": {
-      "username": "PrafulK99",
-      "repoCount": 12,
-      "totalCommits": 83,
-      "contributionConsistency": 61,
-      "complexityScore": 89,
-      "collaborationScore": 87,
-      "suggestions": [
-        "Maintain current commit consistency with monthly quality checkpoints.",
-        "Publish postmortems for complex features to strengthen engineering signal.",
-        "Keep cross-repo reviews active to preserve collaboration momentum."
-      ],
-      "automation": [
-        "Run monthly language diversity checks to detect one-dimensional project trends."
-      ],
-      "monitorSummary": [
-        "PrafulK99 has 12 repos and 83 total commits.",
-        "GitHub monitoring score is 44 (Low).",
-        "Top inferred skills: testing, dsa."
-      ]
-    }
-  },
-  {
-    "id": "3bf805ca-9305-48cf-873b-c21b91740d09",
-    "name": "tsahil01 (Sahil Tiwaskar) · GitHub",
-    "profileUrl": "https://github.com/tsahil01",
-    "score": 40,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 2,
-      "backend": 1,
-      "dsa": 2,
-      "system": 0,
-      "testing": 3
-    },
-    "strengths": [
-      "frontend signal is strong based on detected technical terms.",
-      "backend appears consistently across analyzed content.",
-      "Profile has enough technical content for evidence-based evaluation.",
-      "tsahil01 has 11 repos and 76 total commits.",
-      "GitHub monitoring score is 40 (Low).",
-      "Top inferred skills: testing, frontend."
-    ],
-    "weaknesses": [
-      "system evidence is limited in the analyzed URL content.",
-      "testing indicators are weaker than other technical areas.",
-      "Adding explicit project outcomes and metrics would improve confidence.",
-      "Maintain current commit consistency with monthly quality checkpoints.",
-      "Publish postmortems for complex features to strengthen engineering signal.",
-      "Keep cross-repo reviews active to preserve collaboration momentum."
-    ],
-    "risks": [
-      "Minimal testing signals detected.",
-      "Possible shallow project depth"
-    ],
-    "questions": [
-      "How do you structure a large frontend codebase to stay maintainable?",
-      "What tradeoffs do you consider when optimizing rendering performance?",
-      "How would you design an API that remains backward compatible over time?",
-      "How do you handle retries, timeouts, and idempotency in external API calls?",
-      "Walk through a recent technical decision and the alternatives you evaluated.",
-      "How would you automate GitHub activity monitoring for contribution consistency?",
-      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
-    ],
-    "githubMonitoring": {
-      "username": "tsahil01",
-      "repoCount": 11,
-      "totalCommits": 76,
-      "contributionConsistency": 52,
-      "complexityScore": 78,
-      "collaborationScore": 74,
-      "suggestions": [
-        "Maintain current commit consistency with monthly quality checkpoints.",
-        "Publish postmortems for complex features to strengthen engineering signal.",
-        "Keep cross-repo reviews active to preserve collaboration momentum."
-      ],
-      "automation": [
-        "Run monthly language diversity checks to detect one-dimensional project trends."
-      ],
-      "monitorSummary": [
-        "tsahil01 has 11 repos and 76 total commits.",
-        "GitHub monitoring score is 40 (Low).",
-        "Top inferred skills: testing, frontend."
-      ]
-    }
-  },
-  {
-    "id": "32305367-825f-4573-a528-4584442803d3",
-    "name": "GitHub",
-    "profileUrl": "https://github.com/PrafulK99/hireproof-ai",
-    "score": 44,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 1,
-      "backend": 1,
-      "dsa": 2,
-      "system": 0,
-      "testing": 3
-    },
-    "strengths": [
-      "frontend signal is strong based on detected technical terms.",
-      "backend appears consistently across analyzed content.",
-      "Profile has enough technical content for evidence-based evaluation.",
-      "PrafulK99 has 12 repos and 83 total commits.",
-      "GitHub monitoring score is 44 (Low).",
-      "Top inferred skills: testing, dsa."
-    ],
-    "weaknesses": [
-      "system evidence is limited in the analyzed URL content.",
-      "testing indicators are weaker than other technical areas.",
-      "Adding explicit project outcomes and metrics would improve confidence.",
-      "Maintain current commit consistency with monthly quality checkpoints.",
-      "Publish postmortems for complex features to strengthen engineering signal.",
-      "Keep cross-repo reviews active to preserve collaboration momentum."
-    ],
-    "risks": [
-      "Minimal testing signals detected.",
-      "Possible shallow project depth"
-    ],
-    "questions": [
-      "How do you structure a large frontend codebase to stay maintainable?",
-      "What tradeoffs do you consider when optimizing rendering performance?",
-      "How would you design an API that remains backward compatible over time?",
-      "How do you handle retries, timeouts, and idempotency in external API calls?",
-      "Walk through a recent technical decision and the alternatives you evaluated.",
-      "How would you automate GitHub activity monitoring for contribution consistency?",
-      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
-    ],
-    "githubMonitoring": {
-      "username": "PrafulK99",
-      "repoCount": 12,
-      "totalCommits": 83,
-      "contributionConsistency": 61,
-      "complexityScore": 89,
-      "collaborationScore": 87,
-      "suggestions": [
-        "Maintain current commit consistency with monthly quality checkpoints.",
-        "Publish postmortems for complex features to strengthen engineering signal.",
-        "Keep cross-repo reviews active to preserve collaboration momentum."
-      ],
-      "automation": [
-        "Run monthly language diversity checks to detect one-dimensional project trends."
-      ],
-      "monitorSummary": [
-        "PrafulK99 has 12 repos and 83 total commits.",
-        "GitHub monitoring score is 44 (Low).",
-        "Top inferred skills: testing, dsa."
-      ]
-    }
-  },
-  {
-    "id": "6b62e475-f52a-4ce4-8095-0eaf3aa05ff4",
-    "name": "PrafulK99 (Praful Kharpuriye) · GitHub",
-    "profileUrl": "https://github.com/PrafulK99/",
-    "score": 44,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 2,
-      "backend": 1,
-      "dsa": 2,
-      "system": 0,
-      "testing": 3
-    },
-    "strengths": [
-      "frontend signal is strong based on detected technical terms.",
-      "backend appears consistently across analyzed content.",
-      "Profile has enough technical content for evidence-based evaluation.",
-      "PrafulK99 has 12 repos and 83 total commits.",
-      "GitHub monitoring score is 44 (Low).",
-      "Top inferred skills: testing, frontend."
-    ],
-    "weaknesses": [
-      "system evidence is limited in the analyzed URL content.",
-      "testing indicators are weaker than other technical areas.",
-      "Adding explicit project outcomes and metrics would improve confidence.",
-      "Maintain current commit consistency with monthly quality checkpoints.",
-      "Publish postmortems for complex features to strengthen engineering signal.",
-      "Keep cross-repo reviews active to preserve collaboration momentum."
-    ],
-    "risks": [
-      "Minimal testing signals detected.",
-      "Possible shallow project depth"
-    ],
-    "questions": [
-      "How do you structure a large frontend codebase to stay maintainable?",
-      "What tradeoffs do you consider when optimizing rendering performance?",
-      "How would you design an API that remains backward compatible over time?",
-      "How do you handle retries, timeouts, and idempotency in external API calls?",
-      "Walk through a recent technical decision and the alternatives you evaluated.",
-      "How would you automate GitHub activity monitoring for contribution consistency?",
-      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
-    ],
-    "githubMonitoring": {
-      "username": "PrafulK99",
-      "repoCount": 12,
-      "totalCommits": 83,
-      "contributionConsistency": 61,
-      "complexityScore": 89,
-      "collaborationScore": 87,
-      "suggestions": [
-        "Maintain current commit consistency with monthly quality checkpoints.",
-        "Publish postmortems for complex features to strengthen engineering signal.",
-        "Keep cross-repo reviews active to preserve collaboration momentum."
-      ],
-      "automation": [
-        "Run monthly language diversity checks to detect one-dimensional project trends."
-      ],
-      "monitorSummary": [
-        "PrafulK99 has 12 repos and 83 total commits.",
-        "GitHub monitoring score is 44 (Low).",
-        "Top inferred skills: testing, frontend."
-      ]
-    }
-  },
-  {
-    "id": "d85687d4-2685-4f38-bee5-04d96a3e0782",
-    "name": "tsahil01 (Sahil Tiwaskar) · GitHub",
-    "profileUrl": "https://github.com/tsahil01",
-    "score": 40,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 2,
-      "backend": 1,
-      "dsa": 2,
-      "system": 0,
-      "testing": 3
-    },
-    "strengths": [
-      "frontend signal is strong based on detected technical terms.",
-      "backend appears consistently across analyzed content.",
-      "Profile has enough technical content for evidence-based evaluation.",
-      "tsahil01 has 11 repos and 76 total commits.",
-      "GitHub monitoring score is 40 (Low).",
-      "Top inferred skills: testing, frontend."
-    ],
-    "weaknesses": [
-      "system evidence is limited in the analyzed URL content.",
-      "testing indicators are weaker than other technical areas.",
-      "Adding explicit project outcomes and metrics would improve confidence.",
-      "Maintain current commit consistency with monthly quality checkpoints.",
-      "Publish postmortems for complex features to strengthen engineering signal.",
-      "Keep cross-repo reviews active to preserve collaboration momentum."
-    ],
-    "risks": [
-      "Minimal testing signals detected.",
-      "Possible shallow project depth"
-    ],
-    "questions": [
-      "How do you structure a large frontend codebase to stay maintainable?",
-      "What tradeoffs do you consider when optimizing rendering performance?",
-      "How would you design an API that remains backward compatible over time?",
-      "How do you handle retries, timeouts, and idempotency in external API calls?",
-      "Walk through a recent technical decision and the alternatives you evaluated.",
-      "How would you automate GitHub activity monitoring for contribution consistency?",
-      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
-    ],
-    "githubMonitoring": {
-      "username": "tsahil01",
-      "repoCount": 11,
-      "totalCommits": 76,
-      "contributionConsistency": 52,
-      "complexityScore": 78,
-      "collaborationScore": 74,
-      "suggestions": [
-        "Maintain current commit consistency with monthly quality checkpoints.",
-        "Publish postmortems for complex features to strengthen engineering signal.",
-        "Keep cross-repo reviews active to preserve collaboration momentum."
-      ],
-      "automation": [
-        "Run monthly language diversity checks to detect one-dimensional project trends."
-      ],
-      "monitorSummary": [
-        "tsahil01 has 11 repos and 76 total commits.",
-        "GitHub monitoring score is 40 (Low).",
-        "Top inferred skills: testing, frontend."
-      ]
-    }
-  },
-  {
-    "id": "3c8f2b9d-f41a-470f-b5fc-0edde551da2e",
-    "name": "GitHub",
-    "profileUrl": "https://github.com/Kshitij537/hireproof-ai/tree/main",
-    "score": 36,
-    "authenticityLevel": "Low",
-    "skills": {
-      "frontend": 1,
-      "backend": 1,
-      "dsa": 2,
-      "system": 0,
-      "testing": 3
-    },
-    "strengths": [
-      "frontend signal is strong based on detected technical terms.",
-      "backend appears consistently across analyzed content.",
-      "Profile has enough technical content for evidence-based evaluation.",
-      "Kshitij537 has 13 repos and 90 total commits.",
-      "GitHub monitoring score is 36 (Low).",
+      "Profile is concise and focused on key technical highlights.",
+      "Prafurtyry has 13 repos and 90 total commits.",
+      "GitHub monitoring score is 29 (Low).",
       "Top inferred skills: testing, dsa."
     ],
     "weaknesses": [
@@ -1526,6 +221,8 @@
       "Increase PR review activity to improve collaboration evidence."
     ],
     "risks": [
+      "Could not fully crawl URL content; analysis used URL fallback signals.",
+      "Very low content depth can reduce confidence in score accuracy.",
       "Minimal testing signals detected.",
       "Possible shallow project depth"
     ],
@@ -1539,7 +236,7 @@
       "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
     ],
     "githubMonitoring": {
-      "username": "Kshitij537",
+      "username": "Prafurtyry",
       "repoCount": 13,
       "totalCommits": 90,
       "contributionConsistency": 70,
@@ -1556,31 +253,31 @@
         "Run monthly language diversity checks to detect one-dimensional project trends."
       ],
       "monitorSummary": [
-        "Kshitij537 has 13 repos and 90 total commits.",
-        "GitHub monitoring score is 36 (Low).",
+        "Prafurtyry has 13 repos and 90 total commits.",
+        "GitHub monitoring score is 29 (Low).",
         "Top inferred skills: testing, dsa."
       ]
     }
   },
   {
-    "id": "23903f96-db89-4e4a-bc61-d782b0128dfe",
+    "id": "9c740447-0afb-4478-8f81-7b21b1340796",
     "name": "PrafulK99 (Praful Kharpuriye) · GitHub",
     "profileUrl": "https://github.com/PrafulK99",
-    "score": 44,
+    "score": 40,
     "authenticityLevel": "Low",
     "skills": {
-      "frontend": 2,
+      "frontend": 3,
       "backend": 1,
       "dsa": 2,
       "system": 0,
-      "testing": 3
+      "testing": 4
     },
     "strengths": [
       "frontend signal is strong based on detected technical terms.",
       "backend appears consistently across analyzed content.",
       "Profile has enough technical content for evidence-based evaluation.",
-      "PrafulK99 has 12 repos and 83 total commits.",
-      "GitHub monitoring score is 44 (Low).",
+      "PrafulK99 has 10 repos and 16 total commits.",
+      "GitHub monitoring score is 40 (Low).",
       "Top inferred skills: testing, frontend."
     ],
     "weaknesses": [
@@ -1589,10 +286,11 @@
       "Adding explicit project outcomes and metrics would improve confidence.",
       "Maintain current commit consistency with monthly quality checkpoints.",
       "Publish postmortems for complex features to strengthen engineering signal.",
-      "Keep cross-repo reviews active to preserve collaboration momentum."
+      "Increase PR review activity to improve collaboration evidence."
     ],
     "risks": [
       "Minimal testing signals detected.",
+      "Low development activity",
       "Possible shallow project depth"
     ],
     "questions": [
@@ -1606,45 +304,46 @@
     ],
     "githubMonitoring": {
       "username": "PrafulK99",
-      "repoCount": 12,
-      "totalCommits": 83,
-      "contributionConsistency": 61,
-      "complexityScore": 89,
-      "collaborationScore": 87,
+      "repoCount": 10,
+      "totalCommits": 16,
+      "contributionConsistency": 80,
+      "complexityScore": 84,
+      "collaborationScore": 21,
       "suggestions": [
         "Maintain current commit consistency with monthly quality checkpoints.",
         "Publish postmortems for complex features to strengthen engineering signal.",
-        "Keep cross-repo reviews active to preserve collaboration momentum."
+        "Increase PR review activity to improve collaboration evidence."
       ],
       "automation": [
+        "Track PR comments/reviews per week and surface low-engagement alerts.",
         "Run monthly language diversity checks to detect one-dimensional project trends."
       ],
       "monitorSummary": [
-        "PrafulK99 has 12 repos and 83 total commits.",
-        "GitHub monitoring score is 44 (Low).",
+        "PrafulK99 has 10 repos and 16 total commits.",
+        "GitHub monitoring score is 40 (Low).",
         "Top inferred skills: testing, frontend."
       ]
     }
   },
   {
-    "id": "12e43913-233b-4307-b0f7-7a4d2ef3a1f7",
+    "id": "d65be4f0-029b-48ea-8840-5ddd05e1768e",
     "name": "PrafulK99 (Praful Kharpuriye) · GitHub",
     "profileUrl": "https://github.com/PrafulK99",
-    "score": 44,
+    "score": 40,
     "authenticityLevel": "Low",
     "skills": {
-      "frontend": 2,
+      "frontend": 3,
       "backend": 1,
       "dsa": 2,
       "system": 0,
-      "testing": 3
+      "testing": 4
     },
     "strengths": [
       "frontend signal is strong based on detected technical terms.",
       "backend appears consistently across analyzed content.",
       "Profile has enough technical content for evidence-based evaluation.",
-      "PrafulK99 has 12 repos and 83 total commits.",
-      "GitHub monitoring score is 44 (Low).",
+      "PrafulK99 has 10 repos and 16 total commits.",
+      "GitHub monitoring score is 40 (Low).",
       "Top inferred skills: testing, frontend."
     ],
     "weaknesses": [
@@ -1653,10 +352,11 @@
       "Adding explicit project outcomes and metrics would improve confidence.",
       "Maintain current commit consistency with monthly quality checkpoints.",
       "Publish postmortems for complex features to strengthen engineering signal.",
-      "Keep cross-repo reviews active to preserve collaboration momentum."
+      "Increase PR review activity to improve collaboration evidence."
     ],
     "risks": [
       "Minimal testing signals detected.",
+      "Low development activity",
       "Possible shallow project depth"
     ],
     "questions": [
@@ -1670,57 +370,59 @@
     ],
     "githubMonitoring": {
       "username": "PrafulK99",
-      "repoCount": 12,
-      "totalCommits": 83,
-      "contributionConsistency": 61,
-      "complexityScore": 89,
-      "collaborationScore": 87,
+      "repoCount": 10,
+      "totalCommits": 16,
+      "contributionConsistency": 80,
+      "complexityScore": 84,
+      "collaborationScore": 21,
       "suggestions": [
         "Maintain current commit consistency with monthly quality checkpoints.",
         "Publish postmortems for complex features to strengthen engineering signal.",
-        "Keep cross-repo reviews active to preserve collaboration momentum."
+        "Increase PR review activity to improve collaboration evidence."
       ],
       "automation": [
+        "Track PR comments/reviews per week and surface low-engagement alerts.",
         "Run monthly language diversity checks to detect one-dimensional project trends."
       ],
       "monitorSummary": [
-        "PrafulK99 has 12 repos and 83 total commits.",
-        "GitHub monitoring score is 44 (Low).",
+        "PrafulK99 has 10 repos and 16 total commits.",
+        "GitHub monitoring score is 40 (Low).",
         "Top inferred skills: testing, frontend."
       ]
     }
   },
   {
-    "id": "04823409-3211-4d39-9a47-286b88e1ac09",
-    "name": "PrafulK99 (Praful Kharpuriye) · GitHub",
-    "profileUrl": "https://github.com/PrafulK99",
-    "score": 44,
+    "id": "85022ce0-8476-403e-973e-e0ec22e2d8b1",
+    "name": "Karan406 · GitHub",
+    "profileUrl": "https://github.com/karan406",
+    "score": 6,
     "authenticityLevel": "Low",
     "skills": {
-      "frontend": 2,
-      "backend": 1,
-      "dsa": 2,
+      "frontend": 0,
+      "backend": 0,
+      "dsa": 0,
       "system": 0,
-      "testing": 3
+      "testing": 0
     },
     "strengths": [
       "frontend signal is strong based on detected technical terms.",
       "backend appears consistently across analyzed content.",
       "Profile has enough technical content for evidence-based evaluation.",
-      "PrafulK99 has 12 repos and 83 total commits.",
-      "GitHub monitoring score is 44 (Low).",
-      "Top inferred skills: testing, frontend."
+      "karan406 has 0 repos and 0 total commits.",
+      "GitHub monitoring score is 6 (Low).",
+      "Top inferred skills: frontend, backend."
     ],
     "weaknesses": [
       "system evidence is limited in the analyzed URL content.",
       "testing indicators are weaker than other technical areas.",
       "Adding explicit project outcomes and metrics would improve confidence.",
-      "Maintain current commit consistency with monthly quality checkpoints.",
-      "Publish postmortems for complex features to strengthen engineering signal.",
-      "Keep cross-repo reviews active to preserve collaboration momentum."
+      "Schedule a weekly contribution goal and track streak stability.",
+      "Add one architecture-focused repo with README decisions and tradeoffs.",
+      "Increase PR review activity to improve collaboration evidence."
     ],
     "risks": [
       "Minimal testing signals detected.",
+      "Low development activity",
       "Possible shallow project depth"
     ],
     "questions": [
@@ -1733,24 +435,27 @@
       "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
     ],
     "githubMonitoring": {
-      "username": "PrafulK99",
-      "repoCount": 12,
-      "totalCommits": 83,
-      "contributionConsistency": 61,
-      "complexityScore": 89,
-      "collaborationScore": 87,
+      "username": "karan406",
+      "repoCount": 0,
+      "totalCommits": 0,
+      "contributionConsistency": 0,
+      "complexityScore": 0,
+      "collaborationScore": 0,
       "suggestions": [
-        "Maintain current commit consistency with monthly quality checkpoints.",
-        "Publish postmortems for complex features to strengthen engineering signal.",
-        "Keep cross-repo reviews active to preserve collaboration momentum."
+        "Schedule a weekly contribution goal and track streak stability.",
+        "Add one architecture-focused repo with README decisions and tradeoffs.",
+        "Increase PR review activity to improve collaboration evidence."
       ],
       "automation": [
+        "Enable a weekly consistency monitor that flags 2+ inactive days.",
+        "Auto-detect repos missing architecture docs and open reminder tasks.",
+        "Track PR comments/reviews per week and surface low-engagement alerts.",
         "Run monthly language diversity checks to detect one-dimensional project trends."
       ],
       "monitorSummary": [
-        "PrafulK99 has 12 repos and 83 total commits.",
-        "GitHub monitoring score is 44 (Low).",
-        "Top inferred skills: testing, frontend."
+        "karan406 has 0 repos and 0 total commits.",
+        "GitHub monitoring score is 6 (Low).",
+        "Top inferred skills: frontend, backend."
       ]
     }
   }
