@@ -4,6 +4,7 @@ import path from "path";
 import { generateId } from "../utils/id";
 import { analyzeUrl } from "../services/urlAnalyzerService";
 import type { CandidateReport } from "../types";
+import { generateInsights } from "../services/aiService";
 
 const router = Router();
 const DB_PATH = path.join(__dirname, "..", "data", "candidates.json");
@@ -50,6 +51,25 @@ router.post("/analyze", async (req: Request, res: Response): Promise<void> => {
             risks: automated.risks,
             questions: automated.questions,
         };
+
+        // INTEGRATION: Gemini AI Insights
+        try {
+            const ai = await generateInsights({
+                skills: report.skills,
+                score: report.score,
+                // repoCount not available in automated analysis, omitting
+            });
+
+            if (ai) {
+                report.strengths = ai.strengths;
+                report.weaknesses = ai.weaknesses;
+                report.risks = ai.risks;
+                report.questions = ai.questions;
+            }
+        } catch (err) {
+            console.error("[analyze] AI generation failed, using defaults:", err);
+            // Fallback is already in report from automated analysis
+        }
 
         const candidates = readCandidates();
         candidates.push(report);
