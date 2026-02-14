@@ -103,5 +103,55 @@
       "What design patterns have you used and why?",
       "How do you stay current with new technologies?"
     ]
+  },
+  {
+    "githubUsername": "octocat",
+    "authenticityScore": 52,
+    "skills": {
+      "Python": 96,
+      "DSA": 77,
+      "System Design": 10,
+      "Collaboration": 61
+    },
+    "strengths": [
+      "Consistent commits",
+      "Strong backend focus"
+    ],
+    "weaknesses": [
+      "Limited documentation"
+    ],
+    "riskFlags": [],
+    "interviewQuestions": [
+      "How do you design a scalable REST API for high traffic?",
+      "How would you optimize a slow SQL query in production?",
+      "How do you handle authentication and authorization in Node.js services?",
+      "How do you design retry and timeout strategies for external API calls?",
+      "How do you structure logging and monitoring for backend systems?"
+    ]
+  },
+  {
+    "githubUsername": "octocat",
+    "authenticityScore": 52,
+    "skills": {
+      "Python": 94,
+      "DSA": 95,
+      "System Design": 91,
+      "Collaboration": 61
+    },
+    "strengths": [
+      "Consistent commits",
+      "Strong backend focus"
+    ],
+    "weaknesses": [
+      "Limited documentation"
+    ],
+    "riskFlags": [],
+    "interviewQuestions": [
+      "How do you design a scalable REST API for high traffic?",
+      "How would you optimize a slow SQL query in production?",
+      "How do you handle authentication and authorization in Node.js services?",
+      "How do you design retry and timeout strategies for external API calls?",
+      "How do you structure logging and monitoring for backend systems?"
+    ]
   }
 ]
