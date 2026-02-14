@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Input } from '../components/ui/Input';
 import { Button } from '../components/ui/Button';
 import { API } from '../lib/api';
+import { setAuthSession } from '../lib/session';
 
 export const CandidateLogin = () => {
   const [email, setEmail] = useState('');
@@ -21,6 +22,7 @@ export const CandidateLogin = () => {
 
       const { createClient } = await import('@supabase/supabase-js');
       const supabase = createClient(supabaseUrl, supabaseAnonKey);
+      localStorage.setItem('oauthRole', 'candidate');
 
       const { error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
@@ -70,7 +72,11 @@ export const CandidateLogin = () => {
       
       if (response.ok) {
         const data = await response.json();
-        localStorage.setItem('candidateToken', data.token);
+        setAuthSession({
+          token: data.token,
+          role: 'candidate',
+          user: data.user,
+        });
         window.location.href = '/candidate/dashboard';
       } else {
         const payload = await response.json().catch(() => null);

@@ -154,6 +154,60 @@ router.post('/candidate/login', async (req, res) => {
   }
 });
 
+// OAuth Login bridge (Supabase/Google -> app JWT session)
+router.post('/oauth/login', (req, res) => {
+  const { email, name, role } = req.body as {
+    email?: string;
+    name?: string;
+    role?: string;
+  };
+
+  if (typeof email !== 'string' || typeof role !== 'string') {
+    return res.status(400).json({ error: 'email and role are required' });
+  }
+
+  const normalizedEmail = normalizeEmail(email);
+  const selectedRole = role === 'candidate' ? 'candidate' : 'recruiter';
+
+  const fallbackName =
+    typeof name === 'string' && name.trim().length > 0
+      ? name.trim()
+      : selectedRole === 'candidate'
+        ? 'Candidate User'
+        : 'Recruiter User';
+
+  const user =
+    selectedRole === 'candidate'
+      ? {
+          email: normalizedEmail,
+          role: 'candidate' as const,
+          name: fallbackName,
+          github: normalizedEmail.split('@')[0],
+        }
+      : {
+          email: normalizedEmail,
+          role: 'recruiter' as const,
+          name: fallbackName,
+          company: 'Google OAuth',
+        };
+
+  const token = jwt.sign(
+    {
+      email: user.email,
+      role: user.role,
+      name: user.name,
+    },
+    JWT_SECRET,
+    { expiresIn: '7d' }
+  );
+
+  return res.json({
+    success: true,
+    token,
+    user,
+  });
+});
+
 // Verify Token (for protected routes)
 router.get('/verify', (req, res) => {
   const token = req.headers.authorization?.split(' ')[1];
@@ -167,6 +221,51 @@ router.get('/verify', (req, res) => {
     res.json({ valid: true, user: decoded });
   } catch (error) {
     res.status(401).json({ error: 'Invalid token' });
+  }
+});
+
+router.get('/profile', (req, res) => {
+  const token = req.headers.authorization?.split(' ')[1];
+
+  if (!token) {
+    return res.status(401).json({ error: 'No token provided' });
+  }
+
+  try {
+    const decoded = jwt.verify(token, JWT_SECRET) as { email?: string; role?: string; name?: string };
+    if (!decoded.email || !decoded.role) {
+      return res.status(401).json({ error: 'Invalid token payload' });
+    }
+
+    if (decoded.role === 'recruiter') {
+      const user = mockUsers.recruiters.find((u) => normalizeEmail(u.email) === normalizeEmail(decoded.email || ''));
+      if (!user) {
+        return res.status(404).json({ error: 'Recruiter profile not found' });
+      }
+      return res.json({
+        email: user.email,
+        role: 'recruiter',
+        name: user.name,
+        company: user.company,
+      });
+    }
+
+    if (decoded.role === 'candidate') {
+      const user = mockUsers.candidates.find((u) => normalizeEmail(u.email) === normalizeEmail(decoded.email || ''));
+      if (!user) {
+        return res.status(404).json({ error: 'Candidate profile not found' });
+      }
+      return res.json({
+        email: user.email,
+        role: 'candidate',
+        name: user.name,
+        github: user.github,
+      });
+    }
+
+    return res.status(401).json({ error: 'Invalid role in token' });
+  } catch {
+    return res.status(401).json({ error: 'Invalid token' });
   }
 });
 

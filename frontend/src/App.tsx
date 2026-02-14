@@ -5,6 +5,10 @@ import { CandidateLogin } from './pages/CandidateLogin';
 import CandidateScan from "./pages/CandidateScan";
 import CandidateReport from "./pages/CandidateReport";
 import Dashboard from "./pages/Dashboard";
+import Profile from "./pages/Profile";
+import AuthGuard from "./components/AuthGuard";
+import { getAuthSession } from "./lib/session";
+import AuthCallback from "./pages/AuthCallback";
 
 // Landing Page Component
 function LandingPage() {
@@ -170,17 +174,64 @@ function PriceCard({
 
 // Main App with Routing
 export default function App() {
+  const session = getAuthSession();
+
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/candidate/login" element={<CandidateLogin />} />
         <Route path="/recruiter/login" element={<RecruiterLogin />} />
-        <Route path="/scan" element={<CandidateScan />} />
-        <Route path="/candidate/:id" element={<CandidateReport />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/candidate/dashboard" element={<Dashboard />} />
-        <Route path="/recruiter/dashboard" element={<Dashboard />} />
+        <Route path="/auth/callback" element={<AuthCallback />} />
+        <Route
+          path="/dashboard"
+          element={
+            <Navigate
+              to={session?.role === "candidate" ? "/candidate/dashboard" : "/recruiter/dashboard"}
+              replace
+            />
+          }
+        />
+        <Route
+          path="/recruiter/dashboard"
+          element={
+            <AuthGuard allowedRoles={["recruiter"]}>
+              <Dashboard />
+            </AuthGuard>
+          }
+        />
+        <Route
+          path="/candidate/dashboard"
+          element={
+            <AuthGuard allowedRoles={["candidate"]}>
+              <Dashboard />
+            </AuthGuard>
+          }
+        />
+        <Route
+          path="/scan"
+          element={
+            <AuthGuard allowedRoles={["recruiter"]}>
+              <CandidateScan />
+            </AuthGuard>
+          }
+        />
+        <Route
+          path="/candidate/:id"
+          element={
+            <AuthGuard allowedRoles={["recruiter", "candidate"]}>
+              <CandidateReport />
+            </AuthGuard>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <AuthGuard allowedRoles={["recruiter", "candidate"]}>
+              <Profile />
+            </AuthGuard>
+          }
+        />
         {/* Redirect any unknown routes to home */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
