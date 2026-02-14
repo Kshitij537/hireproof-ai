@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import authRoutes from './routes/auth';
 import analyzeRoutes from './routes/analyze';
 import interviewQuestionsRoutes from './routes/interviewQuestions';
+import hiringTestRoutes from './routes/hiringTest';
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ app.use('/api/auth', authRoutes);
 app.use('/', analyzeRoutes);
 app.use('/api', analyzeRoutes);
 app.use('/api', interviewQuestionsRoutes);
+app.use('/api', hiringTestRoutes);
 
 // Health check
 app.get('/health', (req, res) => {
