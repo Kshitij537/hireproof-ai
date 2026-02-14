@@ -2,6 +2,9 @@ import "./index.css";
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { RecruiterLogin } from './pages/RecruiterLogin';
 import { CandidateLogin } from './pages/CandidateLogin';
+import CandidateScan from "./pages/CandidateScan";
+import CandidateReport from "./pages/CandidateReport";
+import Dashboard from "./pages/Dashboard";
 
 // Landing Page Component
 function LandingPage() {
@@ -173,6 +176,11 @@ export default function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/candidate/login" element={<CandidateLogin />} />
         <Route path="/recruiter/login" element={<RecruiterLogin />} />
+        <Route path="/scan" element={<CandidateScan />} />
+        <Route path="/candidate/:id" element={<CandidateReport />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/candidate/dashboard" element={<Dashboard />} />
+        <Route path="/recruiter/dashboard" element={<Dashboard />} />
         {/* Redirect any unknown routes to home */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

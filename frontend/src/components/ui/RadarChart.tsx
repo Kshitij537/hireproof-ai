@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import {
     Radar,
     RadarChart as RechartsRadarChart,
@@ -22,6 +23,25 @@ const SKILL_LABELS: Record<keyof Skills, string> = {
 };
 
 export default function RadarChart({ skills }: RadarChartProps) {
+    const containerRef = useRef<HTMLDivElement | null>(null);
+    const [ready, setReady] = useState(false);
+
+    useEffect(() => {
+        const el = containerRef.current;
+        if (!el) return;
+
+        const update = () => {
+            const { width, height } = el.getBoundingClientRect();
+            setReady(width > 0 && height > 0);
+        };
+
+        update();
+        const observer = new ResizeObserver(update);
+        observer.observe(el);
+
+        return () => observer.disconnect();
+    }, []);
+
     const data = (Object.keys(SKILL_LABELS) as (keyof Skills)[]).map((key) => ({
         skill: SKILL_LABELS[key],
         value: skills[key],
@@ -29,7 +49,8 @@ export default function RadarChart({ skills }: RadarChartProps) {
     }));
 
     return (
-        <div className="w-full h-[320px]">
+        <div ref={containerRef} className="w-full h-[320px] min-w-0 min-h-[320px]">
+            {ready ? (
             <ResponsiveContainer width="100%" height="100%">
                 <RechartsRadarChart data={data} cx="50%" cy="50%" outerRadius="75%">
                     <PolarGrid stroke="rgba(255,255,255,0.08)" />
@@ -63,6 +84,7 @@ export default function RadarChart({ skills }: RadarChartProps) {
                     />
                 </RechartsRadarChart>
             </ResponsiveContainer>
+            ) : null}
         </div>
     );
 }

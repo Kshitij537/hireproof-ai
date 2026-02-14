@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Input } from '../components/ui/Input';
 import { Button } from '../components/ui/Button';
+import { API } from '../lib/api';
 
 export const RecruiterLogin = () => {
   const [email, setEmail] = useState('');
@@ -36,8 +37,7 @@ export const RecruiterLogin = () => {
     setIsLoading(true);
     
     try {
-      // TODO: Replace with actual API call
-      const response = await fetch('http://127.0.0.1:5000/api/auth/recruiter/login', {
+      const response = await fetch(`${API}/api/auth/recruiter/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password, rememberMe }),

@@ -38,4 +38,15 @@ export interface CandidateReport {
     weaknesses: string[];
     risks: string[];
     questions: string[];
+    githubMonitoring?: {
+        username: string;
+        repoCount: number;
+        totalCommits: number;
+        contributionConsistency: number;
+        complexityScore: number;
+        collaborationScore: number;
+        suggestions: string[];
+        automation: string[];
+        monitorSummary: string[];
+    };
 }

@@ -323,5 +323,345 @@
       "What tradeoffs do you consider when optimizing rendering performance?",
       "Walk through a recent technical decision and the alternatives you evaluated."
     ]
+  },
+  {
+    "id": "1bd165ac-735d-4f93-ab0e-3d5a6025c94e",
+    "name": "ParthLonkar (Parth Lonkar) · GitHub",
+    "profileUrl": "https://github.com/ParthLonkar",
+    "score": 15,
+    "authenticityLevel": "Low",
+    "skills": {
+      "frontend": 1,
+      "backend": 2,
+      "dsa": 0,
+      "system": 0,
+      "testing": 0
+    },
+    "strengths": [
+      "Active GitHub contributions"
+    ],
+    "weaknesses": [
+      "Limited test coverage"
+    ],
+    "risks": [
+      "Possible shallow project depth"
+    ],
+    "questions": [
+      "Explain your most complex project in detail"
+    ]
+  },
+  {
+    "id": "e5057673-ac91-482e-9504-7190d8b59023",
+    "name": "PrafulK99 (Praful Kharpuriye) · GitHub",
+    "profileUrl": "https://github.com/PrafulK99",
+    "score": 13,
+    "authenticityLevel": "Low",
+    "skills": {
+      "frontend": 2,
+      "backend": 0,
+      "dsa": 0,
+      "system": 0,
+      "testing": 0
+    },
+    "strengths": [
+      "Active GitHub contributions"
+    ],
+    "weaknesses": [
+      "Limited test coverage"
+    ],
+    "risks": [
+      "Possible shallow project depth"
+    ],
+    "questions": [
+      "Explain your most complex project in detail"
+    ]
+  },
+  {
+    "id": "af99bb0d-1d4a-4367-ada2-bd1d482baf43",
+    "name": "ParthLonkar (Parth Lonkar) · GitHub",
+    "profileUrl": "https://github.com/ParthLonkar",
+    "score": 15,
+    "authenticityLevel": "Low",
+    "skills": {
+      "frontend": 1,
+      "backend": 2,
+      "dsa": 0,
+      "system": 0,
+      "testing": 0
+    },
+    "strengths": [
+      "Active GitHub contributions"
+    ],
+    "weaknesses": [
+      "Limited test coverage"
+    ],
+    "risks": [
+      "Possible shallow project depth"
+    ],
+    "questions": [
+      "Explain your most complex project in detail"
+    ]
+  },
+  {
+    "id": "8db24fd7-28c9-409e-88ea-506d6d8178d1",
+    "name": "ParthLonkar (Parth Lonkar) · GitHub",
+    "profileUrl": "https://github.com/ParthLonkar",
+    "score": 42,
+    "authenticityLevel": "Low",
+    "skills": {
+      "frontend": 1,
+      "backend": 2,
+      "dsa": 2,
+      "system": 0,
+      "testing": 3
+    },
+    "strengths": [
+      "backend signal is strong based on detected technical terms.",
+      "frontend appears consistently across analyzed content.",
+      "Profile has enough technical content for evidence-based evaluation.",
+      "ParthLonkar has 14 repos and 97 total commits.",
+      "GitHub monitoring score is 42 (Low).",
+      "Top inferred skills: testing, backend."
+    ],
+    "weaknesses": [
+      "system evidence is limited in the analyzed URL content.",
+      "testing indicators are weaker than other technical areas.",
+      "Adding explicit project outcomes and metrics would improve confidence.",
+      "Maintain current commit consistency with monthly quality checkpoints.",
+      "Add one architecture-focused repo with README decisions and tradeoffs.",
+      "Increase PR review activity to improve collaboration evidence."
+    ],
+    "risks": [
+      "Minimal testing signals detected.",
+      "Possible shallow project depth"
+    ],
+    "questions": [
+      "How would you design an API that remains backward compatible over time?",
+      "How do you handle retries, timeouts, and idempotency in external API calls?",
+      "How do you structure a large frontend codebase to stay maintainable?",
+      "What tradeoffs do you consider when optimizing rendering performance?",
+      "Walk through a recent technical decision and the alternatives you evaluated.",
+      "How would you automate GitHub activity monitoring for contribution consistency?",
+      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
+    ],
+    "githubMonitoring": {
+      "username": "ParthLonkar",
+      "repoCount": 14,
+      "totalCommits": 97,
+      "contributionConsistency": 79,
+      "complexityScore": 56,
+      "collaborationScore": 48,
+      "suggestions": [
+        "Maintain current commit consistency with monthly quality checkpoints.",
+        "Add one architecture-focused repo with README decisions and tradeoffs.",
+        "Increase PR review activity to improve collaboration evidence."
+      ],
+      "automation": [
+        "Auto-detect repos missing architecture docs and open reminder tasks.",
+        "Track PR comments/reviews per week and surface low-engagement alerts.",
+        "Run monthly language diversity checks to detect one-dimensional project trends."
+      ],
+      "monitorSummary": [
+        "ParthLonkar has 14 repos and 97 total commits.",
+        "GitHub monitoring score is 42 (Low).",
+        "Top inferred skills: testing, backend."
+      ]
+    }
+  },
+  {
+    "id": "7cd44ad8-ab62-4d16-8751-429971c13e42",
+    "name": "PrafulK99 (Praful Kharpuriye) · GitHub",
+    "profileUrl": "https://github.com/PrafulK99",
+    "score": 44,
+    "authenticityLevel": "Low",
+    "skills": {
+      "frontend": 2,
+      "backend": 1,
+      "dsa": 2,
+      "system": 0,
+      "testing": 3
+    },
+    "strengths": [
+      "frontend signal is strong based on detected technical terms.",
+      "backend appears consistently across analyzed content.",
+      "Profile has enough technical content for evidence-based evaluation.",
+      "PrafulK99 has 12 repos and 83 total commits.",
+      "GitHub monitoring score is 44 (Low).",
+      "Top inferred skills: testing, frontend."
+    ],
+    "weaknesses": [
+      "system evidence is limited in the analyzed URL content.",
+      "testing indicators are weaker than other technical areas.",
+      "Adding explicit project outcomes and metrics would improve confidence.",
+      "Maintain current commit consistency with monthly quality checkpoints.",
+      "Publish postmortems for complex features to strengthen engineering signal.",
+      "Keep cross-repo reviews active to preserve collaboration momentum."
+    ],
+    "risks": [
+      "Minimal testing signals detected.",
+      "Possible shallow project depth"
+    ],
+    "questions": [
+      "How do you structure a large frontend codebase to stay maintainable?",
+      "What tradeoffs do you consider when optimizing rendering performance?",
+      "How would you design an API that remains backward compatible over time?",
+      "How do you handle retries, timeouts, and idempotency in external API calls?",
+      "Walk through a recent technical decision and the alternatives you evaluated.",
+      "How would you automate GitHub activity monitoring for contribution consistency?",
+      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
+    ],
+    "githubMonitoring": {
+      "username": "PrafulK99",
+      "repoCount": 12,
+      "totalCommits": 83,
+      "contributionConsistency": 61,
+      "complexityScore": 89,
+      "collaborationScore": 87,
+      "suggestions": [
+        "Maintain current commit consistency with monthly quality checkpoints.",
+        "Publish postmortems for complex features to strengthen engineering signal.",
+        "Keep cross-repo reviews active to preserve collaboration momentum."
+      ],
+      "automation": [
+        "Run monthly language diversity checks to detect one-dimensional project trends."
+      ],
+      "monitorSummary": [
+        "PrafulK99 has 12 repos and 83 total commits.",
+        "GitHub monitoring score is 44 (Low).",
+        "Top inferred skills: testing, frontend."
+      ]
+    }
+  },
+  {
+    "id": "c4e458f3-5596-46d2-ac86-fbb4048c0488",
+    "name": "ParthLonkar (Parth Lonkar) · GitHub",
+    "profileUrl": "https://github.com/ParthLonkar",
+    "score": 42,
+    "authenticityLevel": "Low",
+    "skills": {
+      "frontend": 1,
+      "backend": 2,
+      "dsa": 2,
+      "system": 0,
+      "testing": 3
+    },
+    "strengths": [
+      "backend signal is strong based on detected technical terms.",
+      "frontend appears consistently across analyzed content.",
+      "Profile has enough technical content for evidence-based evaluation.",
+      "ParthLonkar has 14 repos and 97 total commits.",
+      "GitHub monitoring score is 42 (Low).",
+      "Top inferred skills: testing, backend."
+    ],
+    "weaknesses": [
+      "system evidence is limited in the analyzed URL content.",
+      "testing indicators are weaker than other technical areas.",
+      "Adding explicit project outcomes and metrics would improve confidence.",
+      "Maintain current commit consistency with monthly quality checkpoints.",
+      "Add one architecture-focused repo with README decisions and tradeoffs.",
+      "Increase PR review activity to improve collaboration evidence."
+    ],
+    "risks": [
+      "Minimal testing signals detected.",
+      "Possible shallow project depth"
+    ],
+    "questions": [
+      "How would you design an API that remains backward compatible over time?",
+      "How do you handle retries, timeouts, and idempotency in external API calls?",
+      "How do you structure a large frontend codebase to stay maintainable?",
+      "What tradeoffs do you consider when optimizing rendering performance?",
+      "Walk through a recent technical decision and the alternatives you evaluated.",
+      "How would you automate GitHub activity monitoring for contribution consistency?",
+      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
+    ],
+    "githubMonitoring": {
+      "username": "ParthLonkar",
+      "repoCount": 14,
+      "totalCommits": 97,
+      "contributionConsistency": 79,
+      "complexityScore": 56,
+      "collaborationScore": 48,
+      "suggestions": [
+        "Maintain current commit consistency with monthly quality checkpoints.",
+        "Add one architecture-focused repo with README decisions and tradeoffs.",
+        "Increase PR review activity to improve collaboration evidence."
+      ],
+      "automation": [
+        "Auto-detect repos missing architecture docs and open reminder tasks.",
+        "Track PR comments/reviews per week and surface low-engagement alerts.",
+        "Run monthly language diversity checks to detect one-dimensional project trends."
+      ],
+      "monitorSummary": [
+        "ParthLonkar has 14 repos and 97 total commits.",
+        "GitHub monitoring score is 42 (Low).",
+        "Top inferred skills: testing, backend."
+      ]
+    }
+  },
+  {
+    "id": "9e3b2b14-5dac-4fc8-97ef-2f1e5cd78901",
+    "name": "ParthLonkar (Parth Lonkar) · GitHub",
+    "profileUrl": "https://github.com/ParthLonkar",
+    "score": 42,
+    "authenticityLevel": "Low",
+    "skills": {
+      "frontend": 1,
+      "backend": 2,
+      "dsa": 2,
+      "system": 0,
+      "testing": 3
+    },
+    "strengths": [
+      "backend signal is strong based on detected technical terms.",
+      "frontend appears consistently across analyzed content.",
+      "Profile has enough technical content for evidence-based evaluation.",
+      "ParthLonkar has 14 repos and 97 total commits.",
+      "GitHub monitoring score is 42 (Low).",
+      "Top inferred skills: testing, backend."
+    ],
+    "weaknesses": [
+      "system evidence is limited in the analyzed URL content.",
+      "testing indicators are weaker than other technical areas.",
+      "Adding explicit project outcomes and metrics would improve confidence.",
+      "Maintain current commit consistency with monthly quality checkpoints.",
+      "Add one architecture-focused repo with README decisions and tradeoffs.",
+      "Increase PR review activity to improve collaboration evidence."
+    ],
+    "risks": [
+      "Minimal testing signals detected.",
+      "Possible shallow project depth"
+    ],
+    "questions": [
+      "How would you design an API that remains backward compatible over time?",
+      "How do you handle retries, timeouts, and idempotency in external API calls?",
+      "How do you structure a large frontend codebase to stay maintainable?",
+      "What tradeoffs do you consider when optimizing rendering performance?",
+      "Walk through a recent technical decision and the alternatives you evaluated.",
+      "How would you automate GitHub activity monitoring for contribution consistency?",
+      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
+    ],
+    "githubMonitoring": {
+      "username": "ParthLonkar",
+      "repoCount": 14,
+      "totalCommits": 97,
+      "contributionConsistency": 79,
+      "complexityScore": 56,
+      "collaborationScore": 48,
+      "suggestions": [
+        "Maintain current commit consistency with monthly quality checkpoints.",
+        "Add one architecture-focused repo with README decisions and tradeoffs.",
+        "Increase PR review activity to improve collaboration evidence."
+      ],
+      "automation": [
+        "Auto-detect repos missing architecture docs and open reminder tasks.",
+        "Track PR comments/reviews per week and surface low-engagement alerts.",
+        "Run monthly language diversity checks to detect one-dimensional project trends."
+      ],
+      "monitorSummary": [
+        "ParthLonkar has 14 repos and 97 total commits.",
+        "GitHub monitoring score is 42 (Low).",
+        "Top inferred skills: testing, backend."
+      ]
+    }
   }
 ]
