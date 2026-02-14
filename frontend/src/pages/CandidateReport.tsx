@@ -259,7 +259,16 @@ export default function CandidateReport() {
                 <TimelineChart data={candidate.commitTimeline} />
 
                 {/* 9. Interview Copilot */}
-                <InterviewSection questions={candidate.questions} />
+                <InterviewSection
+                    questions={candidate.questions}
+                    candidateData={{
+                        name: candidate.name,
+                        skills: Object.keys(candidate.skills || {}),
+                        score: candidate.score,
+                        strengths: candidate.strengths,
+                        weaknesses: candidate.weaknesses,
+                    }}
+                />
 
                 {/* 10. Assessment Generator */}
                 <AssessmentSection />
