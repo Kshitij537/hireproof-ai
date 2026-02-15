@@ -1,15 +1,51 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Input } from '../components/ui/Input';
 import { Button } from '../components/ui/Button';
 import { API } from '../lib/api';
-import { setAuthSession } from '../lib/session';
+import { getAuthSession, setAuthSession } from '../lib/session';
+import { supabase } from '../lib/supabase';
 
 export const CandidateLogin = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [checkingAuth, setCheckingAuth] = useState(true);
   const [errors, setErrors] = useState<{ email?: string; password?: string }>({});
+
+  // If already authenticated, redirect away from login
+  useEffect(() => {
+    const checkSession = async () => {
+      // Check localStorage session first
+      const session = getAuthSession();
+      if (session?.role === 'candidate') {
+        navigate('/candidate/home', { replace: true });
+        return;
+      }
+      // Fallback: check Supabase session
+      try {
+        const { data: { session: sbSession } } = await supabase.auth.getSession();
+        if (sbSession?.user) {
+          navigate('/candidate/home', { replace: true });
+          return;
+        }
+      } catch {
+        // ignore
+      }
+      setCheckingAuth(false);
+    };
+    checkSession();
+  }, [navigate]);
+
+  if (checkingAuth) {
+    return (
+      <div className="min-h-screen grid place-items-center bg-white">
+        <div className="w-6 h-6 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin" />
+      </div>
+    );
+  }
 
   const handleGoogleLogin = async () => {
     try {

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { API } from "../lib/api";
-import { clearAuthSession, getAuthSession, type AuthRole } from "../lib/session";
+import { supabase } from "../lib/supabase";
+import { clearAuthSession, getAuthSession, setAuthSession, type AuthRole } from "../lib/session";
 
 type AuthGuardProps = {
   children: React.ReactNode;
@@ -15,49 +16,117 @@ export default function AuthGuard({ children, allowedRoles }: AuthGuardProps) {
   const [role, setRole] = useState<AuthRole | null>(null);
 
   useEffect(() => {
+    let cancelled = false;
+
     const verify = async () => {
+      // ── 1. Try localStorage session first ──
       const session = getAuthSession();
-      if (!session) {
-        setAuthorized(false);
-        setChecking(false);
-        return;
-      }
 
-      if (allowedRoles && !allowedRoles.includes(session.role)) {
-        setAuthorized(false);
-        setRole(session.role);
-        setChecking(false);
-        return;
-      }
-
-      try {
-        const res = await fetch(`${API}/api/auth/verify`, {
-          headers: {
-            Authorization: `Bearer ${session.token}`,
-          },
-        });
-
-        if (!res.ok) {
-          clearAuthSession();
-          setAuthorized(false);
-          setChecking(false);
+      if (session) {
+        // Check role match
+        if (allowedRoles && !allowedRoles.includes(session.role)) {
+          if (!cancelled) {
+            setRole(session.role);
+            setAuthorized(false);
+            setChecking(false);
+          }
           return;
         }
 
-        setRole(session.role);
-        setAuthorized(true);
-        setChecking(false);
+        // Try to verify the custom JWT with backend
+        try {
+          const res = await fetch(`${API}/api/auth/verify`, {
+            headers: { Authorization: `Bearer ${session.token}` },
+          });
+
+          if (res.ok) {
+            if (!cancelled) {
+              setRole(session.role);
+              setAuthorized(true);
+              setChecking(false);
+            }
+            return;
+          }
+        } catch {
+          // Backend verify failed — don't immediately redirect,
+          // fall through to Supabase session check below
+          console.warn("[AuthGuard] Backend verify failed, trying Supabase session...");
+        }
+      }
+
+      // ── 2. Fallback: check Supabase session ──
+      // This handles cases where the custom JWT expired or
+      // backend restarted, but Supabase OAuth session is still valid
+      try {
+        const { data: { session: sbSession } } = await supabase.auth.getSession();
+
+        if (sbSession?.user) {
+          console.log("[AuthGuard] Supabase session found:", sbSession.user.email);
+
+          // Determine role from stored preferences or existing session
+          const storedRole =
+            localStorage.getItem("hireproof_role") ||
+            localStorage.getItem("authRole") ||
+            session?.role;
+          const effectiveRole: AuthRole = storedRole === "recruiter" ? "recruiter" : "candidate";
+
+          // Check role
+          if (allowedRoles && !allowedRoles.includes(effectiveRole)) {
+            if (!cancelled) {
+              setRole(effectiveRole);
+              setAuthorized(false);
+              setChecking(false);
+            }
+            return;
+          }
+
+          // Rebuild the localStorage session from Supabase data
+          setAuthSession({
+            token: sbSession.access_token,
+            role: effectiveRole,
+            user: {
+              email: sbSession.user.email ?? "",
+              role: effectiveRole,
+              name:
+                sbSession.user.user_metadata?.full_name ??
+                sbSession.user.user_metadata?.name ??
+                "User",
+            },
+          });
+
+          if (!cancelled) {
+            setRole(effectiveRole);
+            setAuthorized(true);
+            setChecking(false);
+          }
+          return;
+        }
       } catch {
+        console.warn("[AuthGuard] Supabase session check failed");
+      }
+
+      // ── 3. No valid session anywhere — redirect to login ──
+      if (!cancelled) {
+        clearAuthSession();
         setAuthorized(false);
+        setRole(session?.role ?? null);
         setChecking(false);
       }
     };
 
     verify();
+    return () => { cancelled = true; };
   }, [allowedRoles]);
 
   if (checking) {
-    return <div className="min-h-screen grid place-items-center text-white/70 bg-[#0a0a0f]">Checking session...</div>;
+    return (
+      <div className="min-h-screen grid place-items-center text-white/70 bg-[#0a0a0f]">
+        <div className="flex items-center gap-3">
+          <div className="w-5 h-5 border-2 border-purple-400 border-t-transparent rounded-full animate-spin" />
+          <span>Checking session...</span>
+        </div>
+      </div>
+    );
   }
 
   if (!authorized) {

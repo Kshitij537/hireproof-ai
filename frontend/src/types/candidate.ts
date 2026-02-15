@@ -23,6 +23,27 @@ export interface GitHubMonitoring {
     monitorSummary: string[];
 }
 
+export interface GitHubProfile {
+    login: string;
+    name: string | null;
+    avatar_url: string;
+    html_url: string;
+    bio: string | null;
+    followers: number;
+    following: number;
+    public_repos: number;
+    created_at: string;
+}
+
+export interface TopRepo {
+    name: string;
+    stars: number;
+    description: string | null;
+    language: string | null;
+    url: string;
+    lastUpdated: string;
+}
+
 export interface Candidate {
     id: string;
     name: string;
@@ -42,4 +63,6 @@ export interface Candidate {
     contributionDepth?: number;
     commitTimeline?: CommitPoint[];
     githubMonitoring?: GitHubMonitoring;
+    githubProfile?: GitHubProfile;
+    topRepos?: TopRepo[];
 }

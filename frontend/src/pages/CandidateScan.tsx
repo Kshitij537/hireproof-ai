@@ -19,6 +19,7 @@ export default function CandidateScan() {
     const [loadingStep, setLoadingStep] = useState(0);
     const [error, setError] = useState("");
     const [dots, setDots] = useState("");
+    const [isSaving, setIsSaving] = useState(false);
 
     useEffect(() => {
         if (!loading) return;
@@ -108,6 +109,13 @@ export default function CandidateScan() {
 
     /** Insert into Supabase only if recruiter, never blocks navigation */
     const trySupabaseInsert = async (candidate: Candidate, githubUrl: string) => {
+        // Lock to prevent double insert from double-click or rerender
+        if (isSaving) {
+            console.log("[Supabase Insert] Already saving, skipping");
+            return;
+        }
+        setIsSaving(true);
+
         try {
             // Check role from multiple sources
             const role =
@@ -135,22 +143,41 @@ export default function CandidateScan() {
                 return;
             }
 
-            console.log("[Supabase Insert] Current user:", user.id);
+            console.log("[Supabase Insert] Attempt insert:", candidate.id);
 
-            // Check for duplicate
+            // Check for duplicate by github_url (not report_id) to prevent
+            // re-scanning the same profile from creating a new row
             const { data: existing, error: dupError } = await supabase
                 .from("candidates")
                 .select("id")
-                .eq("report_id", candidate.id)
+                .eq("github_url", githubUrl)
                 .eq("created_by", user.id)
                 .maybeSingle();
+
+            console.log("[Supabase Insert] Existing found:", existing);
 
             if (dupError) {
                 console.error("[Supabase Insert] Duplicate check error:", dupError.message);
             }
 
             if (existing) {
-                console.log("[Supabase Insert] Candidate already exists, skipping");
+                // Update existing row instead of inserting a duplicate
+                console.log("[Supabase Insert] Candidate already exists, updating");
+                const { error: updateError } = await supabase
+                    .from("candidates")
+                    .update({
+                        name: candidate.name,
+                        score: candidate.score,
+                        authenticity_level: candidate.authenticityLevel,
+                        report_id: candidate.id,
+                    })
+                    .eq("id", existing.id);
+
+                if (updateError) {
+                    console.error("[Supabase Insert] Update error:", updateError.message);
+                } else {
+                    console.log("[Supabase Insert] ✅ Candidate updated successfully!");
+                }
                 return;
             }
 
@@ -176,6 +203,8 @@ export default function CandidateScan() {
             }
         } catch (err) {
             console.error("[Supabase Insert] Exception (non-blocking):", err);
+        } finally {
+            setIsSaving(false);
         }
     };
 
