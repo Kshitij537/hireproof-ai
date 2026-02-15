@@ -15,12 +15,18 @@ export default function AuthGuard({ children, allowedRoles }: AuthGuardProps) {
   const [authorized, setAuthorized] = useState(false);
   const [role, setRole] = useState<AuthRole | null>(null);
 
+  /* DEBUG LOGS */
+  console.log("Route:", location.pathname);
+  // console.log("Session:", getAuthSession()); // Avoid spamming full object
+  console.log("Role:", role);
+
   useEffect(() => {
     let cancelled = false;
 
     const verify = async () => {
       // ── 1. Try localStorage session first ──
       const session = getAuthSession();
+      console.log("Session:", session);
 
       if (session) {
         // Check role match
@@ -130,9 +136,35 @@ export default function AuthGuard({ children, allowedRoles }: AuthGuardProps) {
   }
 
   if (!authorized) {
-    const session = getAuthSession();
-    const fallbackRole = role ?? session?.role;
-    const redirectPath = fallbackRole === "candidate" ? "/candidate/login" : "/recruiter/login";
+
+
+    // Smart redirect based on URL context
+    const isCandidateRoute = location.pathname.startsWith("/candidate");
+    const isRecruiterRoute =
+      location.pathname.startsWith("/recruiter") ||
+      location.pathname.startsWith("/compare") ||
+      location.pathname.startsWith("/scan");
+
+    let redirectPath = "/";
+
+    // 1. If currently logged in but unauthorized (wrong role), redirect to own dashboard
+    if (role === "candidate") {
+      return <Navigate to="/candidate/home" state={{ from: location }} replace />;
+    }
+    if (role === "recruiter") {
+      return <Navigate to="/recruiter/dashboard" state={{ from: location }} replace />;
+    }
+
+    // 2. If not logged in, redirect based on URL context
+    if (isCandidateRoute) {
+      redirectPath = "/candidate/login";
+    } else if (isRecruiterRoute) {
+      redirectPath = "/recruiter/login";
+    } else {
+      // Fallback
+      redirectPath = "/recruiter/login";
+    }
+
     return <Navigate to={redirectPath} state={{ from: location }} replace />;
   }
 

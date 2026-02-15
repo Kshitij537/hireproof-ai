@@ -1,6 +1,4 @@
 import {
-    LineChart,
-    Line,
     XAxis,
     YAxis,
     CartesianGrid,
@@ -65,7 +63,7 @@ export default function TimelineChart({ data }: Props) {
                                 color: "#fff",
                                 fontSize: "13px",
                             }}
-                            formatter={(value: number) => [`${value}`, "Commits"]}
+                            formatter={(value: number | string | undefined) => [`${value ?? 0}`, "Commits"]}
                         />
                         <Area
                             type="monotone"

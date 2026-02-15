@@ -172,6 +172,36 @@ router.post("/analyze", async (req: Request, res: Response): Promise<void> => {
                 automation: automationInsights.automation,
                 monitorSummary: automationInsights.monitorSummary,
             };
+
+            // Attach GitHub profile for frontend display
+            if (githubData.user) {
+                report.githubProfile = {
+                    login: githubData.user.login,
+                    name: githubData.user.name,
+                    avatar_url: githubData.user.avatar_url,
+                    html_url: githubData.user.html_url,
+                    bio: githubData.user.bio,
+                    followers: githubData.user.followers,
+                    following: githubData.user.following,
+                    public_repos: githubData.user.public_repos,
+                    created_at: githubData.user.created_at,
+                };
+            }
+
+            // Attach top repos sorted by stars
+            if (githubData.repos.length > 0) {
+                report.topRepos = githubData.repos
+                    .sort((a, b) => b.stargazers_count - a.stargazers_count)
+                    .slice(0, 6)
+                    .map((r) => ({
+                        name: r.name,
+                        stars: r.stargazers_count,
+                        description: r.description ?? null,
+                        language: r.language,
+                        url: `https://github.com/${githubUsername}/${r.name}`,
+                        lastUpdated: r.updated_at,
+                    }));
+            }
         }
 
         // INTEGRATION: Gemini AI Insights
@@ -197,40 +227,9 @@ router.post("/analyze", async (req: Request, res: Response): Promise<void> => {
         candidates.push(report);
         saveCandidates(candidates);
 
-        // ── Save to Supabase ──
-        try {
-            const topSkills = (Object.entries(report.skills) as [string, number][])
-                .sort((a, b) => b[1] - a[1])
-                .slice(0, 3)
-                .map(([skill]) => skill);
-
-            const { data: sbRow, error: sbError } = await supabase
-                .from("candidates")
-                .insert({
-                    report_id: report.id,
-                    name: report.name,
-                    github_url: report.profileUrl,
-                    authenticity_score: report.score,
-                    authenticity_level: report.authenticityLevel,
-                    top_skills: topSkills,
-                    repo_count: report.githubMonitoring?.repoCount ?? 0,
-                    followers: report.githubMonitoring?.collaborationScore ?? 0,
-                    report_data: report,
-                })
-                .select()
-                .single();
-
-            if (sbError) {
-                console.error("[analyze] Supabase insert failed:", sbError.message);
-            } else {
-                console.log("[analyze] Saved to Supabase, row id:", sbRow?.id);
-                // Attach the Supabase row id for the frontend
-                (report as any).supabase_id = sbRow?.id;
-            }
-        } catch (sbErr) {
-            console.error("[analyze] Supabase insert error:", sbErr);
-            // Non-fatal — JSON file is the fallback
-        }
+        // NOTE: Supabase insert is handled by the frontend (CandidateScan.tsx)
+        // which sets created_by = user.id and has duplicate checking.
+        // Doing it here too would cause duplicate rows.
 
         res.json(report);
     } catch (error) {

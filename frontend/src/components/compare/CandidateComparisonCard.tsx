@@ -49,7 +49,7 @@ function ScoreRing({ score, size = 100 }: { score: number; size?: number }) {
 export default function CandidateComparisonCard({ candidate, isWinner }: Props) {
     const radarData = SKILL_MAP.map(({ key, label }) => ({
         skill: label,
-        value: candidate.skills[key] * 10,
+        value: (candidate.skills[key] ?? 0) * 10,
         fullMark: 100,
     }));
 
@@ -63,8 +63,8 @@ export default function CandidateComparisonCard({ candidate, isWinner }: Props) 
     return (
         <div
             className={`flex-1 rounded-2xl border p-6 backdrop-blur-xl shadow-2xl shadow-black/20 transition-all ${isWinner
-                    ? "bg-emerald-500/[0.04] border-emerald-500/30"
-                    : "bg-white/[0.03] border-white/[0.08]"
+                ? "bg-emerald-500/[0.04] border-emerald-500/30"
+                : "bg-white/[0.03] border-white/[0.08]"
                 }`}
         >
             {/* Header */}

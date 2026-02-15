@@ -32,7 +32,7 @@ export default function SkillsList({ skills }: Props) {
 
             <div className="space-y-4">
                 {SKILL_META.map(({ key, label, color }) => {
-                    const value = skills[key];
+                    const value = skills[key] ?? 0;
                     const strength = getStrengthLabel(value);
                     const pct = (value / 10) * 100;
 

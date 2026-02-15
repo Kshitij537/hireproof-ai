@@ -7,7 +7,7 @@ import CandidateReport from "./pages/CandidateReport";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import CandidateHome from "./pages/CandidateHome";
-import CandidateAnalysis from "./pages/Candidateanalysis"; // ADD THIS IMPORT
+import CandidateAnalysis from "./pages/Candidateanalysis"; // Keep as is for now, but verify existence
 import CompareCandidates from "./pages/CompareCandidates";
 import AuthGuard from "./components/AuthGuard";
 import { getAuthSession } from "./lib/session";
@@ -301,8 +301,8 @@ function PriceCard({
   return (
     <div
       className={`p-8 rounded-2xl text-center transition-all ${highlight
-          ? "bg-gradient-to-b from-purple-500/10 to-blue-500/5 border-2 border-purple-500/30 shadow-lg shadow-purple-500/5"
-          : "bg-white/[0.02] border border-white/[0.08] hover:border-white/[0.15]"
+        ? "bg-gradient-to-b from-purple-500/10 to-blue-500/5 border-2 border-purple-500/30 shadow-lg shadow-purple-500/5"
+        : "bg-white/[0.02] border border-white/[0.08] hover:border-white/[0.15]"
         }`}
     >
       {highlight && (
@@ -316,8 +316,8 @@ function PriceCard({
       <a
         href="/recruiter/login"
         className={`inline-block mt-6 px-6 py-2.5 rounded-xl text-sm font-semibold transition-all ${highlight
-            ? "bg-white text-black hover:bg-gray-100"
-            : "bg-white/[0.07] border border-white/10 text-white hover:bg-white/[0.12]"
+          ? "bg-white text-black hover:bg-gray-100"
+          : "bg-white/[0.07] border border-white/10 text-white hover:bg-white/[0.12]"
           }`}
       >
         Get Started

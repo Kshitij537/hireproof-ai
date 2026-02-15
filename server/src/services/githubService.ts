@@ -17,6 +17,7 @@ export type GithubUser = {
 
 export type GithubRepo = {
     name: string;
+    description: string | null;
     language: string | null;
     stargazers_count: number;
     forks_count: number;

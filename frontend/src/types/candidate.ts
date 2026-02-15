@@ -4,6 +4,7 @@ export interface Skills {
     dsa: number;
     system: number;
     testing: number;
+    devops?: number;
 }
 
 export interface CommitPoint {

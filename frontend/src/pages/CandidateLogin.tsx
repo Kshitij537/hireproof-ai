@@ -17,10 +17,21 @@ export const CandidateLogin = () => {
 
   // If already authenticated, redirect away from login
   useEffect(() => {
+    console.log("[CandidateLogin] Mounting...");
     const checkSession = async () => {
+      // Safety timeout: if checking takes > 2s, just show the login page
+      const timeoutId = setTimeout(() => {
+        console.warn("[CandidateLogin] Session check timed out, forcing render.");
+        setCheckingAuth(false);
+      }, 2000);
+
       // Check localStorage session first
       const session = getAuthSession();
+      console.log("[CandidateLogin] Session check:", session);
+
       if (session?.role === 'candidate') {
+        clearTimeout(timeoutId);
+        console.log("[CandidateLogin] Valid candidate session found, redirecting...");
         navigate('/candidate/home', { replace: true });
         return;
       }
@@ -28,12 +39,16 @@ export const CandidateLogin = () => {
       try {
         const { data: { session: sbSession } } = await supabase.auth.getSession();
         if (sbSession?.user) {
+          clearTimeout(timeoutId);
+          console.log("[CandidateLogin] Supabase session found, redirecting...");
           navigate('/candidate/home', { replace: true });
           return;
         }
-      } catch {
-        // ignore
+      } catch (e) {
+        console.error("[CandidateLogin] Session check error:", e);
       }
+
+      clearTimeout(timeoutId);
       setCheckingAuth(false);
     };
     checkSession();
@@ -42,7 +57,10 @@ export const CandidateLogin = () => {
   if (checkingAuth) {
     return (
       <div className="min-h-screen grid place-items-center bg-white">
-        <div className="w-6 h-6 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin" />
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-6 h-6 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin" />
+          <p className="text-gray-500 text-sm">Verifying session...</p>
+        </div>
       </div>
     );
   }

@@ -458,5 +458,986 @@
         "Top inferred skills: frontend, backend."
       ]
     }
+  },
+  {
+    "id": "13941520-d31d-414c-8b84-686f83e7ed66",
+    "name": "PrafulK99 (Praful Kharpuriye) · GitHub",
+    "profileUrl": "https://github.com/PrafulK99",
+    "score": 40,
+    "authenticityLevel": "Low",
+    "skills": {
+      "frontend": 3,
+      "backend": 1,
+      "dsa": 2,
+      "system": 0,
+      "testing": 4
+    },
+    "strengths": [
+      "frontend signal is strong based on detected technical terms.",
+      "backend appears consistently across analyzed content.",
+      "Profile has enough technical content for evidence-based evaluation.",
+      "Verify primary GitHub accounts and authenticity if the candidate progresses.",
+      "Monitor for any future increase in development activity and collaborative contributions.",
+      "Track consistency of contributions for any shifts, given the current high consistency despite low volume."
+    ],
+    "weaknesses": [
+      "system evidence is limited in the analyzed URL content.",
+      "testing indicators are weaker than other technical areas.",
+      "Adding explicit project outcomes and metrics would improve confidence.",
+      "Prioritize immediate verification of the 'Low authenticityLevel' before proceeding.",
+      "During screening, directly inquire about the low total commits and development activity (e.g., private repos, other profiles).",
+      "Investigate reasons for the low collaboration score; assess teamwork capabilities through scenario-based questions."
+    ],
+    "risks": [
+      "Minimal testing signals detected.",
+      "Low development activity",
+      "Possible shallow project depth"
+    ],
+    "questions": [
+      "How do you structure a large frontend codebase to stay maintainable?",
+      "What tradeoffs do you consider when optimizing rendering performance?",
+      "How would you design an API that remains backward compatible over time?",
+      "How do you handle retries, timeouts, and idempotency in external API calls?",
+      "Walk through a recent technical decision and the alternatives you evaluated.",
+      "How would you automate GitHub activity monitoring for contribution consistency?",
+      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
+    ],
+    "githubMonitoring": {
+      "username": "PrafulK99",
+      "repoCount": 10,
+      "totalCommits": 16,
+      "contributionConsistency": 80,
+      "complexityScore": 84,
+      "collaborationScore": 21,
+      "suggestions": [
+        "Prioritize immediate verification of the 'Low authenticityLevel' before proceeding.",
+        "During screening, directly inquire about the low total commits and development activity (e.g., private repos, other profiles).",
+        "Investigate reasons for the low collaboration score; assess teamwork capabilities through scenario-based questions.",
+        "Validate 'testing' and 'frontend' skills through practical assessment given the low development activity and high complexity score."
+      ],
+      "automation": [
+        "Automatically flag profiles with 'Low authenticityLevel' for mandatory manual review and deeper investigation.",
+        "Configure the system to auto-generate specific interview questions about development activity and collaboration for similar profiles.",
+        "Initiate an automated short 'frontend' and 'testing' practical coding challenge to assess real-world skill application."
+      ],
+      "monitorSummary": [
+        "Verify primary GitHub accounts and authenticity if the candidate progresses.",
+        "Monitor for any future increase in development activity and collaborative contributions.",
+        "Track consistency of contributions for any shifts, given the current high consistency despite low volume."
+      ]
+    },
+    "githubProfile": {
+      "login": "PrafulK99",
+      "name": "Praful Kharpuriye",
+      "avatar_url": "https://avatars.githubusercontent.com/u/162088519?v=4",
+      "html_url": "https://github.com/PrafulK99",
+      "bio": null,
+      "followers": 3,
+      "following": 2,
+      "public_repos": 22,
+      "created_at": "2024-03-04T05:33:03Z"
+    },
+    "topRepos": [
+      {
+        "name": "Hustlers_ClaudeSolvathon",
+        "stars": 2,
+        "description": "A GenAI-powered project built for the IIIT Claude Solveathon 2025",
+        "language": "CSS",
+        "url": "https://github.com/PrafulK99/Hustlers_ClaudeSolvathon",
+        "lastUpdated": "2025-10-11T04:22:01Z"
+      },
+      {
+        "name": "Kairo",
+        "stars": 1,
+        "description": "AI Resume & Job Tailoring Agent",
+        "language": "TypeScript",
+        "url": "https://github.com/PrafulK99/Kairo",
+        "lastUpdated": "2025-11-22T18:26:51Z"
+      },
+      {
+        "name": "hireproof-ai",
+        "stars": 0,
+        "description": "AI Hiring Intelligence Platform that verifies real developer skill authenticity using project data",
+        "language": "TypeScript",
+        "url": "https://github.com/PrafulK99/hireproof-ai",
+        "lastUpdated": "2026-02-14T23:38:28Z"
+      },
+      {
+        "name": "CivicFlow-AI",
+        "stars": 0,
+        "description": null,
+        "language": "TypeScript",
+        "url": "https://github.com/PrafulK99/CivicFlow-AI",
+        "lastUpdated": "2026-02-09T14:27:38Z"
+      },
+      {
+        "name": "agentic-honeypot-api",
+        "stars": 0,
+        "description": null,
+        "language": "Python",
+        "url": "https://github.com/PrafulK99/agentic-honeypot-api",
+        "lastUpdated": "2026-02-04T16:40:30Z"
+      },
+      {
+        "name": "InfraGuard",
+        "stars": 0,
+        "description": "The Autonomous SRE Agent",
+        "language": "Python",
+        "url": "https://github.com/PrafulK99/InfraGuard",
+        "lastUpdated": "2025-12-13T09:01:31Z"
+      }
+    ]
+  },
+  {
+    "id": "be9700fa-dcc7-43af-a94c-48cb8c7248d7",
+    "name": "Kshitij537 (Kshitij Deshmukh) · GitHub",
+    "profileUrl": "https://github.com/kshitij537",
+    "score": 26,
+    "authenticityLevel": "Low",
+    "skills": {
+      "frontend": 2,
+      "backend": 1,
+      "dsa": 0,
+      "system": 0,
+      "testing": 2
+    },
+    "strengths": [
+      "frontend signal is strong based on detected technical terms.",
+      "backend appears consistently across analyzed content.",
+      "Profile has enough technical content for evidence-based evaluation.",
+      "kshitij537 has 1 repos and 116 total commits.",
+      "GitHub monitoring score is 26 (Low).",
+      "Top inferred skills: frontend, testing."
+    ],
+    "weaknesses": [
+      "system evidence is limited in the analyzed URL content.",
+      "testing indicators are weaker than other technical areas.",
+      "Adding explicit project outcomes and metrics would improve confidence.",
+      "Maintain current commit consistency with monthly quality checkpoints.",
+      "Add one architecture-focused repo with README decisions and tradeoffs.",
+      "Increase PR review activity to improve collaboration evidence."
+    ],
+    "risks": [
+      "Minimal testing signals detected.",
+      "Possible shallow project depth"
+    ],
+    "questions": [
+      "How do you structure a large frontend codebase to stay maintainable?",
+      "What tradeoffs do you consider when optimizing rendering performance?",
+      "How would you design an API that remains backward compatible over time?",
+      "How do you handle retries, timeouts, and idempotency in external API calls?",
+      "Walk through a recent technical decision and the alternatives you evaluated.",
+      "How would you automate GitHub activity monitoring for contribution consistency?",
+      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
+    ],
+    "githubMonitoring": {
+      "username": "kshitij537",
+      "repoCount": 1,
+      "totalCommits": 116,
+      "contributionConsistency": 100,
+      "complexityScore": 15,
+      "collaborationScore": 6,
+      "suggestions": [
+        "Maintain current commit consistency with monthly quality checkpoints.",
+        "Add one architecture-focused repo with README decisions and tradeoffs.",
+        "Increase PR review activity to improve collaboration evidence."
+      ],
+      "automation": [
+        "Auto-detect repos missing architecture docs and open reminder tasks.",
+        "Track PR comments/reviews per week and surface low-engagement alerts.",
+        "Run monthly language diversity checks to detect one-dimensional project trends."
+      ],
+      "monitorSummary": [
+        "kshitij537 has 1 repos and 116 total commits.",
+        "GitHub monitoring score is 26 (Low).",
+        "Top inferred skills: frontend, testing."
+      ]
+    },
+    "githubProfile": {
+      "login": "Kshitij537",
+      "name": "Kshitij Deshmukh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/195414783?v=4",
+      "html_url": "https://github.com/Kshitij537",
+      "bio": null,
+      "followers": 3,
+      "following": 3,
+      "public_repos": 4,
+      "created_at": "2025-01-17T06:30:11Z"
+    },
+    "topRepos": [
+      {
+        "name": "Portfolio_Kshitij",
+        "stars": 0,
+        "description": null,
+        "language": "JavaScript",
+        "url": "https://github.com/kshitij537/Portfolio_Kshitij",
+        "lastUpdated": "2026-01-23T19:07:42Z"
+      }
+    ]
+  },
+  {
+    "id": "c3467e0c-04ab-4bba-be80-69d4d102ad1c",
+    "name": "PrafulK99 (Praful Kharpuriye) · GitHub",
+    "profileUrl": "https://github.com/PrafulK99",
+    "score": 40,
+    "authenticityLevel": "Low",
+    "skills": {
+      "frontend": 3,
+      "backend": 1,
+      "dsa": 2,
+      "system": 0,
+      "testing": 4
+    },
+    "strengths": [
+      "frontend signal is strong based on detected technical terms.",
+      "backend appears consistently across analyzed content.",
+      "Profile has enough technical content for evidence-based evaluation.",
+      "PrafulK99 has 10 repos and 16 total commits.",
+      "GitHub monitoring score is 40 (Low).",
+      "Top inferred skills: testing, frontend."
+    ],
+    "weaknesses": [
+      "system evidence is limited in the analyzed URL content.",
+      "testing indicators are weaker than other technical areas.",
+      "Adding explicit project outcomes and metrics would improve confidence.",
+      "Maintain current commit consistency with monthly quality checkpoints.",
+      "Publish postmortems for complex features to strengthen engineering signal.",
+      "Increase PR review activity to improve collaboration evidence."
+    ],
+    "risks": [
+      "Minimal testing signals detected.",
+      "Low development activity",
+      "Possible shallow project depth"
+    ],
+    "questions": [
+      "How do you structure a large frontend codebase to stay maintainable?",
+      "What tradeoffs do you consider when optimizing rendering performance?",
+      "How would you design an API that remains backward compatible over time?",
+      "How do you handle retries, timeouts, and idempotency in external API calls?",
+      "Walk through a recent technical decision and the alternatives you evaluated.",
+      "How would you automate GitHub activity monitoring for contribution consistency?",
+      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
+    ],
+    "githubMonitoring": {
+      "username": "PrafulK99",
+      "repoCount": 10,
+      "totalCommits": 16,
+      "contributionConsistency": 80,
+      "complexityScore": 84,
+      "collaborationScore": 21,
+      "suggestions": [
+        "Maintain current commit consistency with monthly quality checkpoints.",
+        "Publish postmortems for complex features to strengthen engineering signal.",
+        "Increase PR review activity to improve collaboration evidence."
+      ],
+      "automation": [
+        "Track PR comments/reviews per week and surface low-engagement alerts.",
+        "Run monthly language diversity checks to detect one-dimensional project trends."
+      ],
+      "monitorSummary": [
+        "PrafulK99 has 10 repos and 16 total commits.",
+        "GitHub monitoring score is 40 (Low).",
+        "Top inferred skills: testing, frontend."
+      ]
+    },
+    "githubProfile": {
+      "login": "PrafulK99",
+      "name": "Praful Kharpuriye",
+      "avatar_url": "https://avatars.githubusercontent.com/u/162088519?v=4",
+      "html_url": "https://github.com/PrafulK99",
+      "bio": null,
+      "followers": 3,
+      "following": 2,
+      "public_repos": 22,
+      "created_at": "2024-03-04T05:33:03Z"
+    },
+    "topRepos": [
+      {
+        "name": "Hustlers_ClaudeSolvathon",
+        "stars": 2,
+        "description": "A GenAI-powered project built for the IIIT Claude Solveathon 2025",
+        "language": "CSS",
+        "url": "https://github.com/PrafulK99/Hustlers_ClaudeSolvathon",
+        "lastUpdated": "2025-10-11T04:22:01Z"
+      },
+      {
+        "name": "Kairo",
+        "stars": 1,
+        "description": "AI Resume & Job Tailoring Agent",
+        "language": "TypeScript",
+        "url": "https://github.com/PrafulK99/Kairo",
+        "lastUpdated": "2025-11-22T18:26:51Z"
+      },
+      {
+        "name": "hireproof-ai",
+        "stars": 0,
+        "description": "AI Hiring Intelligence Platform that verifies real developer skill authenticity using project data",
+        "language": "TypeScript",
+        "url": "https://github.com/PrafulK99/hireproof-ai",
+        "lastUpdated": "2026-02-14T23:38:28Z"
+      },
+      {
+        "name": "CivicFlow-AI",
+        "stars": 0,
+        "description": null,
+        "language": "TypeScript",
+        "url": "https://github.com/PrafulK99/CivicFlow-AI",
+        "lastUpdated": "2026-02-09T14:27:38Z"
+      },
+      {
+        "name": "agentic-honeypot-api",
+        "stars": 0,
+        "description": null,
+        "language": "Python",
+        "url": "https://github.com/PrafulK99/agentic-honeypot-api",
+        "lastUpdated": "2026-02-04T16:40:30Z"
+      },
+      {
+        "name": "InfraGuard",
+        "stars": 0,
+        "description": "The Autonomous SRE Agent",
+        "language": "Python",
+        "url": "https://github.com/PrafulK99/InfraGuard",
+        "lastUpdated": "2025-12-13T09:01:31Z"
+      }
+    ]
+  },
+  {
+    "id": "e9f188d1-e5f1-48a0-84ec-200408c47247",
+    "name": "PrafulK99 (Praful Kharpuriye) · GitHub",
+    "profileUrl": "https://github.com/PrafulK99",
+    "score": 40,
+    "authenticityLevel": "Low",
+    "skills": {
+      "frontend": 3,
+      "backend": 1,
+      "dsa": 2,
+      "system": 0,
+      "testing": 4
+    },
+    "strengths": [
+      "frontend signal is strong based on detected technical terms.",
+      "backend appears consistently across analyzed content.",
+      "Profile has enough technical content for evidence-based evaluation.",
+      "Primary focus: Authenticity Level verification. This is a critical blocker.",
+      "Key metric to watch: Sustained increase in total commits and contribution frequency.",
+      "Performance indicator: Improvement in collaboration score through visible team interactions."
+    ],
+    "weaknesses": [
+      "system evidence is limited in the analyzed URL content.",
+      "testing indicators are weaker than other technical areas.",
+      "Adding explicit project outcomes and metrics would improve confidence.",
+      "Prioritize immediate investigation into 'Low authenticityLevel' to validate profile integrity.",
+      "Encourage active participation in open-source projects or collaborative repositories to boost 'collaborationScore'.",
+      "Recommend creating dedicated, public repositories to showcase complex 'testing' and 'frontend' projects, demonstrating the 'complexityScore' more frequently."
+    ],
+    "risks": [
+      "Minimal testing signals detected.",
+      "Low development activity",
+      "Possible shallow project depth"
+    ],
+    "questions": [
+      "How do you structure a large frontend codebase to stay maintainable?",
+      "What tradeoffs do you consider when optimizing rendering performance?",
+      "How would you design an API that remains backward compatible over time?",
+      "How do you handle retries, timeouts, and idempotency in external API calls?",
+      "Walk through a recent technical decision and the alternatives you evaluated.",
+      "How would you automate GitHub activity monitoring for contribution consistency?",
+      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
+    ],
+    "githubMonitoring": {
+      "username": "PrafulK99",
+      "repoCount": 10,
+      "totalCommits": 16,
+      "contributionConsistency": 80,
+      "complexityScore": 84,
+      "collaborationScore": 21,
+      "suggestions": [
+        "Prioritize immediate investigation into 'Low authenticityLevel' to validate profile integrity.",
+        "Encourage active participation in open-source projects or collaborative repositories to boost 'collaborationScore'.",
+        "Recommend creating dedicated, public repositories to showcase complex 'testing' and 'frontend' projects, demonstrating the 'complexityScore' more frequently.",
+        "Advise on increasing commit frequency and project engagement to address 'Low development activity' and improve overall 'score'."
+      ],
+      "automation": [
+        "Set up an immediate alert and workflow for any profile flagged with 'Low authenticityLevel' for manual review.",
+        "Implement a trigger to notify hiring managers if 'totalCommits' doesn't exceed 30 within the next 30 days.",
+        "Automate tracking of new external pull requests or open-source contributions to monitor improvements in 'collaborationScore'.",
+        "Establish a quarterly review to assess trends in 'score', 'contributionConsistency', and 'collaborationScore' to identify sustained progress."
+      ],
+      "monitorSummary": [
+        "Primary focus: Authenticity Level verification. This is a critical blocker.",
+        "Key metric to watch: Sustained increase in total commits and contribution frequency.",
+        "Performance indicator: Improvement in collaboration score through visible team interactions."
+      ]
+    },
+    "githubProfile": {
+      "login": "PrafulK99",
+      "name": "Praful Kharpuriye",
+      "avatar_url": "https://avatars.githubusercontent.com/u/162088519?v=4",
+      "html_url": "https://github.com/PrafulK99",
+      "bio": null,
+      "followers": 3,
+      "following": 2,
+      "public_repos": 22,
+      "created_at": "2024-03-04T05:33:03Z"
+    },
+    "topRepos": [
+      {
+        "name": "Hustlers_ClaudeSolvathon",
+        "stars": 2,
+        "description": "A GenAI-powered project built for the IIIT Claude Solveathon 2025",
+        "language": "CSS",
+        "url": "https://github.com/PrafulK99/Hustlers_ClaudeSolvathon",
+        "lastUpdated": "2025-10-11T04:22:01Z"
+      },
+      {
+        "name": "Kairo",
+        "stars": 1,
+        "description": "AI Resume & Job Tailoring Agent",
+        "language": "TypeScript",
+        "url": "https://github.com/PrafulK99/Kairo",
+        "lastUpdated": "2025-11-22T18:26:51Z"
+      },
+      {
+        "name": "hireproof-ai",
+        "stars": 0,
+        "description": "AI Hiring Intelligence Platform that verifies real developer skill authenticity using project data",
+        "language": "TypeScript",
+        "url": "https://github.com/PrafulK99/hireproof-ai",
+        "lastUpdated": "2026-02-14T23:38:28Z"
+      },
+      {
+        "name": "CivicFlow-AI",
+        "stars": 0,
+        "description": null,
+        "language": "TypeScript",
+        "url": "https://github.com/PrafulK99/CivicFlow-AI",
+        "lastUpdated": "2026-02-09T14:27:38Z"
+      },
+      {
+        "name": "agentic-honeypot-api",
+        "stars": 0,
+        "description": null,
+        "language": "Python",
+        "url": "https://github.com/PrafulK99/agentic-honeypot-api",
+        "lastUpdated": "2026-02-04T16:40:30Z"
+      },
+      {
+        "name": "InfraGuard",
+        "stars": 0,
+        "description": "The Autonomous SRE Agent",
+        "language": "Python",
+        "url": "https://github.com/PrafulK99/InfraGuard",
+        "lastUpdated": "2025-12-13T09:01:31Z"
+      }
+    ]
+  },
+  {
+    "id": "8dbe2c87-8c3c-4d5d-a8d7-313458251a7f",
+    "name": "PrafulK99 (Praful Kharpuriye) · GitHub",
+    "profileUrl": "https://github.com/PrafulK99",
+    "score": 40,
+    "authenticityLevel": "Low",
+    "skills": {
+      "frontend": 3,
+      "backend": 1,
+      "dsa": 2,
+      "system": 0,
+      "testing": 4
+    },
+    "strengths": [
+      "frontend signal is strong based on detected technical terms.",
+      "backend appears consistently across analyzed content.",
+      "Profile has enough technical content for evidence-based evaluation.",
+      "PrafulK99 has 10 repos and 16 total commits.",
+      "GitHub monitoring score is 40 (Low).",
+      "Top inferred skills: testing, frontend."
+    ],
+    "weaknesses": [
+      "system evidence is limited in the analyzed URL content.",
+      "testing indicators are weaker than other technical areas.",
+      "Adding explicit project outcomes and metrics would improve confidence.",
+      "Maintain current commit consistency with monthly quality checkpoints.",
+      "Publish postmortems for complex features to strengthen engineering signal.",
+      "Increase PR review activity to improve collaboration evidence."
+    ],
+    "risks": [
+      "Minimal testing signals detected.",
+      "Low development activity",
+      "Possible shallow project depth"
+    ],
+    "questions": [
+      "How do you structure a large frontend codebase to stay maintainable?",
+      "What tradeoffs do you consider when optimizing rendering performance?",
+      "How would you design an API that remains backward compatible over time?",
+      "How do you handle retries, timeouts, and idempotency in external API calls?",
+      "Walk through a recent technical decision and the alternatives you evaluated.",
+      "How would you automate GitHub activity monitoring for contribution consistency?",
+      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
+    ],
+    "githubMonitoring": {
+      "username": "PrafulK99",
+      "repoCount": 10,
+      "totalCommits": 16,
+      "contributionConsistency": 80,
+      "complexityScore": 84,
+      "collaborationScore": 21,
+      "suggestions": [
+        "Maintain current commit consistency with monthly quality checkpoints.",
+        "Publish postmortems for complex features to strengthen engineering signal.",
+        "Increase PR review activity to improve collaboration evidence."
+      ],
+      "automation": [
+        "Track PR comments/reviews per week and surface low-engagement alerts.",
+        "Run monthly language diversity checks to detect one-dimensional project trends."
+      ],
+      "monitorSummary": [
+        "PrafulK99 has 10 repos and 16 total commits.",
+        "GitHub monitoring score is 40 (Low).",
+        "Top inferred skills: testing, frontend."
+      ]
+    },
+    "githubProfile": {
+      "login": "PrafulK99",
+      "name": "Praful Kharpuriye",
+      "avatar_url": "https://avatars.githubusercontent.com/u/162088519?v=4",
+      "html_url": "https://github.com/PrafulK99",
+      "bio": null,
+      "followers": 3,
+      "following": 2,
+      "public_repos": 22,
+      "created_at": "2024-03-04T05:33:03Z"
+    },
+    "topRepos": [
+      {
+        "name": "Hustlers_ClaudeSolvathon",
+        "stars": 2,
+        "description": "A GenAI-powered project built for the IIIT Claude Solveathon 2025",
+        "language": "CSS",
+        "url": "https://github.com/PrafulK99/Hustlers_ClaudeSolvathon",
+        "lastUpdated": "2025-10-11T04:22:01Z"
+      },
+      {
+        "name": "Kairo",
+        "stars": 1,
+        "description": "AI Resume & Job Tailoring Agent",
+        "language": "TypeScript",
+        "url": "https://github.com/PrafulK99/Kairo",
+        "lastUpdated": "2025-11-22T18:26:51Z"
+      },
+      {
+        "name": "hireproof-ai",
+        "stars": 0,
+        "description": "AI Hiring Intelligence Platform that verifies real developer skill authenticity using project data",
+        "language": "TypeScript",
+        "url": "https://github.com/PrafulK99/hireproof-ai",
+        "lastUpdated": "2026-02-14T23:38:28Z"
+      },
+      {
+        "name": "CivicFlow-AI",
+        "stars": 0,
+        "description": null,
+        "language": "TypeScript",
+        "url": "https://github.com/PrafulK99/CivicFlow-AI",
+        "lastUpdated": "2026-02-09T14:27:38Z"
+      },
+      {
+        "name": "agentic-honeypot-api",
+        "stars": 0,
+        "description": null,
+        "language": "Python",
+        "url": "https://github.com/PrafulK99/agentic-honeypot-api",
+        "lastUpdated": "2026-02-04T16:40:30Z"
+      },
+      {
+        "name": "InfraGuard",
+        "stars": 0,
+        "description": "The Autonomous SRE Agent",
+        "language": "Python",
+        "url": "https://github.com/PrafulK99/InfraGuard",
+        "lastUpdated": "2025-12-13T09:01:31Z"
+      }
+    ]
+  },
+  {
+    "id": "4c27cbd8-789a-4d48-a6df-04cd4629a4e1",
+    "name": "PrafulK99 (Praful Kharpuriye) · GitHub",
+    "profileUrl": "https://github.com/PrafulK99",
+    "score": 40,
+    "authenticityLevel": "Low",
+    "skills": {
+      "frontend": 3,
+      "backend": 1,
+      "dsa": 2,
+      "system": 0,
+      "testing": 4
+    },
+    "strengths": [
+      "frontend signal is strong based on detected technical terms.",
+      "backend appears consistently across analyzed content.",
+      "Profile has enough technical content for evidence-based evaluation.",
+      "PrafulK99 has 10 repos and 16 total commits.",
+      "GitHub monitoring score is 40 (Low).",
+      "Top inferred skills: testing, frontend."
+    ],
+    "weaknesses": [
+      "system evidence is limited in the analyzed URL content.",
+      "testing indicators are weaker than other technical areas.",
+      "Adding explicit project outcomes and metrics would improve confidence.",
+      "Maintain current commit consistency with monthly quality checkpoints.",
+      "Publish postmortems for complex features to strengthen engineering signal.",
+      "Increase PR review activity to improve collaboration evidence."
+    ],
+    "risks": [
+      "Minimal testing signals detected.",
+      "Low development activity",
+      "Possible shallow project depth"
+    ],
+    "questions": [
+      "How do you structure a large frontend codebase to stay maintainable?",
+      "What tradeoffs do you consider when optimizing rendering performance?",
+      "How would you design an API that remains backward compatible over time?",
+      "How do you handle retries, timeouts, and idempotency in external API calls?",
+      "Walk through a recent technical decision and the alternatives you evaluated.",
+      "How would you automate GitHub activity monitoring for contribution consistency?",
+      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
+    ],
+    "githubMonitoring": {
+      "username": "PrafulK99",
+      "repoCount": 10,
+      "totalCommits": 16,
+      "contributionConsistency": 80,
+      "complexityScore": 84,
+      "collaborationScore": 21,
+      "suggestions": [
+        "Maintain current commit consistency with monthly quality checkpoints.",
+        "Publish postmortems for complex features to strengthen engineering signal.",
+        "Increase PR review activity to improve collaboration evidence."
+      ],
+      "automation": [
+        "Track PR comments/reviews per week and surface low-engagement alerts.",
+        "Run monthly language diversity checks to detect one-dimensional project trends."
+      ],
+      "monitorSummary": [
+        "PrafulK99 has 10 repos and 16 total commits.",
+        "GitHub monitoring score is 40 (Low).",
+        "Top inferred skills: testing, frontend."
+      ]
+    },
+    "githubProfile": {
+      "login": "PrafulK99",
+      "name": "Praful Kharpuriye",
+      "avatar_url": "https://avatars.githubusercontent.com/u/162088519?v=4",
+      "html_url": "https://github.com/PrafulK99",
+      "bio": null,
+      "followers": 3,
+      "following": 2,
+      "public_repos": 22,
+      "created_at": "2024-03-04T05:33:03Z"
+    },
+    "topRepos": [
+      {
+        "name": "Hustlers_ClaudeSolvathon",
+        "stars": 2,
+        "description": "A GenAI-powered project built for the IIIT Claude Solveathon 2025",
+        "language": "CSS",
+        "url": "https://github.com/PrafulK99/Hustlers_ClaudeSolvathon",
+        "lastUpdated": "2025-10-11T04:22:01Z"
+      },
+      {
+        "name": "Kairo",
+        "stars": 1,
+        "description": "AI Resume & Job Tailoring Agent",
+        "language": "TypeScript",
+        "url": "https://github.com/PrafulK99/Kairo",
+        "lastUpdated": "2025-11-22T18:26:51Z"
+      },
+      {
+        "name": "hireproof-ai",
+        "stars": 0,
+        "description": "AI Hiring Intelligence Platform that verifies real developer skill authenticity using project data",
+        "language": "TypeScript",
+        "url": "https://github.com/PrafulK99/hireproof-ai",
+        "lastUpdated": "2026-02-14T23:38:28Z"
+      },
+      {
+        "name": "CivicFlow-AI",
+        "stars": 0,
+        "description": null,
+        "language": "TypeScript",
+        "url": "https://github.com/PrafulK99/CivicFlow-AI",
+        "lastUpdated": "2026-02-09T14:27:38Z"
+      },
+      {
+        "name": "agentic-honeypot-api",
+        "stars": 0,
+        "description": null,
+        "language": "Python",
+        "url": "https://github.com/PrafulK99/agentic-honeypot-api",
+        "lastUpdated": "2026-02-04T16:40:30Z"
+      },
+      {
+        "name": "InfraGuard",
+        "stars": 0,
+        "description": "The Autonomous SRE Agent",
+        "language": "Python",
+        "url": "https://github.com/PrafulK99/InfraGuard",
+        "lastUpdated": "2025-12-13T09:01:31Z"
+      }
+    ]
+  },
+  {
+    "id": "893a287f-be2d-4688-a0e8-8aee86996d00",
+    "name": "PrafulK99 (Praful Kharpuriye) · GitHub",
+    "profileUrl": "https://github.com/PrafulK99",
+    "score": 40,
+    "authenticityLevel": "Low",
+    "skills": {
+      "frontend": 3,
+      "backend": 1,
+      "dsa": 2,
+      "system": 0,
+      "testing": 4
+    },
+    "strengths": [
+      "frontend signal is strong based on detected technical terms.",
+      "backend appears consistently across analyzed content.",
+      "Profile has enough technical content for evidence-based evaluation.",
+      "PrafulK99 has 10 repos and 16 total commits.",
+      "GitHub monitoring score is 40 (Low).",
+      "Top inferred skills: testing, frontend."
+    ],
+    "weaknesses": [
+      "system evidence is limited in the analyzed URL content.",
+      "testing indicators are weaker than other technical areas.",
+      "Adding explicit project outcomes and metrics would improve confidence.",
+      "Maintain current commit consistency with monthly quality checkpoints.",
+      "Publish postmortems for complex features to strengthen engineering signal.",
+      "Increase PR review activity to improve collaboration evidence."
+    ],
+    "risks": [
+      "Minimal testing signals detected.",
+      "Low development activity",
+      "Possible shallow project depth"
+    ],
+    "questions": [
+      "How do you structure a large frontend codebase to stay maintainable?",
+      "What tradeoffs do you consider when optimizing rendering performance?",
+      "How would you design an API that remains backward compatible over time?",
+      "How do you handle retries, timeouts, and idempotency in external API calls?",
+      "Walk through a recent technical decision and the alternatives you evaluated.",
+      "How would you automate GitHub activity monitoring for contribution consistency?",
+      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
+    ],
+    "githubMonitoring": {
+      "username": "PrafulK99",
+      "repoCount": 10,
+      "totalCommits": 16,
+      "contributionConsistency": 80,
+      "complexityScore": 84,
+      "collaborationScore": 21,
+      "suggestions": [
+        "Maintain current commit consistency with monthly quality checkpoints.",
+        "Publish postmortems for complex features to strengthen engineering signal.",
+        "Increase PR review activity to improve collaboration evidence."
+      ],
+      "automation": [
+        "Track PR comments/reviews per week and surface low-engagement alerts.",
+        "Run monthly language diversity checks to detect one-dimensional project trends."
+      ],
+      "monitorSummary": [
+        "PrafulK99 has 10 repos and 16 total commits.",
+        "GitHub monitoring score is 40 (Low).",
+        "Top inferred skills: testing, frontend."
+      ]
+    },
+    "githubProfile": {
+      "login": "PrafulK99",
+      "name": "Praful Kharpuriye",
+      "avatar_url": "https://avatars.githubusercontent.com/u/162088519?v=4",
+      "html_url": "https://github.com/PrafulK99",
+      "bio": null,
+      "followers": 3,
+      "following": 2,
+      "public_repos": 22,
+      "created_at": "2024-03-04T05:33:03Z"
+    },
+    "topRepos": [
+      {
+        "name": "Hustlers_ClaudeSolvathon",
+        "stars": 2,
+        "description": "A GenAI-powered project built for the IIIT Claude Solveathon 2025",
+        "language": "CSS",
+        "url": "https://github.com/PrafulK99/Hustlers_ClaudeSolvathon",
+        "lastUpdated": "2025-10-11T04:22:01Z"
+      },
+      {
+        "name": "Kairo",
+        "stars": 1,
+        "description": "AI Resume & Job Tailoring Agent",
+        "language": "TypeScript",
+        "url": "https://github.com/PrafulK99/Kairo",
+        "lastUpdated": "2025-11-22T18:26:51Z"
+      },
+      {
+        "name": "hireproof-ai",
+        "stars": 0,
+        "description": "AI Hiring Intelligence Platform that verifies real developer skill authenticity using project data",
+        "language": "TypeScript",
+        "url": "https://github.com/PrafulK99/hireproof-ai",
+        "lastUpdated": "2026-02-15T01:40:05Z"
+      },
+      {
+        "name": "CivicFlow-AI",
+        "stars": 0,
+        "description": null,
+        "language": "TypeScript",
+        "url": "https://github.com/PrafulK99/CivicFlow-AI",
+        "lastUpdated": "2026-02-09T14:27:38Z"
+      },
+      {
+        "name": "agentic-honeypot-api",
+        "stars": 0,
+        "description": null,
+        "language": "Python",
+        "url": "https://github.com/PrafulK99/agentic-honeypot-api",
+        "lastUpdated": "2026-02-04T16:40:30Z"
+      },
+      {
+        "name": "InfraGuard",
+        "stars": 0,
+        "description": "The Autonomous SRE Agent",
+        "language": "Python",
+        "url": "https://github.com/PrafulK99/InfraGuard",
+        "lastUpdated": "2025-12-13T09:01:31Z"
+      }
+    ]
+  },
+  {
+    "id": "a87471c8-645f-4de4-90a1-6dd6ec72e74b",
+    "name": "PrafulK99 (Praful Kharpuriye) · GitHub",
+    "profileUrl": "https://github.com/PrafulK99",
+    "score": 40,
+    "authenticityLevel": "Low",
+    "skills": {
+      "frontend": 3,
+      "backend": 1,
+      "dsa": 2,
+      "system": 0,
+      "testing": 4
+    },
+    "strengths": [
+      "frontend signal is strong based on detected technical terms.",
+      "backend appears consistently across analyzed content.",
+      "Profile has enough technical content for evidence-based evaluation.",
+      "PrafulK99 has 10 repos and 16 total commits.",
+      "GitHub monitoring score is 40 (Low).",
+      "Top inferred skills: testing, frontend."
+    ],
+    "weaknesses": [
+      "system evidence is limited in the analyzed URL content.",
+      "testing indicators are weaker than other technical areas.",
+      "Adding explicit project outcomes and metrics would improve confidence.",
+      "Maintain current commit consistency with monthly quality checkpoints.",
+      "Publish postmortems for complex features to strengthen engineering signal.",
+      "Increase PR review activity to improve collaboration evidence."
+    ],
+    "risks": [
+      "Minimal testing signals detected.",
+      "Low development activity",
+      "Possible shallow project depth"
+    ],
+    "questions": [
+      "How do you structure a large frontend codebase to stay maintainable?",
+      "What tradeoffs do you consider when optimizing rendering performance?",
+      "How would you design an API that remains backward compatible over time?",
+      "How do you handle retries, timeouts, and idempotency in external API calls?",
+      "Walk through a recent technical decision and the alternatives you evaluated.",
+      "How would you automate GitHub activity monitoring for contribution consistency?",
+      "Which repository best demonstrates system design decisions, and what tradeoffs did you choose?"
+    ],
+    "githubMonitoring": {
+      "username": "PrafulK99",
+      "repoCount": 10,
+      "totalCommits": 16,
+      "contributionConsistency": 80,
+      "complexityScore": 84,
+      "collaborationScore": 21,
+      "suggestions": [
+        "Maintain current commit consistency with monthly quality checkpoints.",
+        "Publish postmortems for complex features to strengthen engineering signal.",
+        "Increase PR review activity to improve collaboration evidence."
+      ],
+      "automation": [
+        "Track PR comments/reviews per week and surface low-engagement alerts.",
+        "Run monthly language diversity checks to detect one-dimensional project trends."
+      ],
+      "monitorSummary": [
+        "PrafulK99 has 10 repos and 16 total commits.",
+        "GitHub monitoring score is 40 (Low).",
+        "Top inferred skills: testing, frontend."
+      ]
+    },
+    "githubProfile": {
+      "login": "PrafulK99",
+      "name": "Praful Kharpuriye",
+      "avatar_url": "https://avatars.githubusercontent.com/u/162088519?v=4",
+      "html_url": "https://github.com/PrafulK99",
+      "bio": null,
+      "followers": 3,
+      "following": 2,
+      "public_repos": 22,
+      "created_at": "2024-03-04T05:33:03Z"
+    },
+    "topRepos": [
+      {
+        "name": "Hustlers_ClaudeSolvathon",
+        "stars": 2,
+        "description": "A GenAI-powered project built for the IIIT Claude Solveathon 2025",
+        "language": "CSS",
+        "url": "https://github.com/PrafulK99/Hustlers_ClaudeSolvathon",
+        "lastUpdated": "2025-10-11T04:22:01Z"
+      },
+      {
+        "name": "Kairo",
+        "stars": 1,
+        "description": "AI Resume & Job Tailoring Agent",
+        "language": "TypeScript",
+        "url": "https://github.com/PrafulK99/Kairo",
+        "lastUpdated": "2025-11-22T18:26:51Z"
+      },
+      {
+        "name": "hireproof-ai",
+        "stars": 0,
+        "description": "AI Hiring Intelligence Platform that verifies real developer skill authenticity using project data",
+        "language": "TypeScript",
+        "url": "https://github.com/PrafulK99/hireproof-ai",
+        "lastUpdated": "2026-02-15T01:40:05Z"
+      },
+      {
+        "name": "CivicFlow-AI",
+        "stars": 0,
+        "description": null,
+        "language": "TypeScript",
+        "url": "https://github.com/PrafulK99/CivicFlow-AI",
+        "lastUpdated": "2026-02-09T14:27:38Z"
+      },
+      {
+        "name": "agentic-honeypot-api",
+        "stars": 0,
+        "description": null,
+        "language": "Python",
+        "url": "https://github.com/PrafulK99/agentic-honeypot-api",
+        "lastUpdated": "2026-02-04T16:40:30Z"
+      },
+      {
+        "name": "InfraGuard",
+        "stars": 0,
+        "description": "The Autonomous SRE Agent",
+        "language": "Python",
+        "url": "https://github.com/PrafulK99/InfraGuard",
+        "lastUpdated": "2025-12-13T09:01:31Z"
+      }
+    ]
   }
 ]

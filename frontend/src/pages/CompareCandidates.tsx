@@ -13,64 +13,93 @@ export default function CompareCandidates() {
     const [selectedB, setSelectedB] = useState<string | null>(null);
 
     useEffect(() => {
+        // --- Prefill from candidate report Compare button ---
+        let preselectedId: string | null = null;
+        let prefilledCandidate: Candidate | null = null;
+        try {
+            const prefill = localStorage.getItem("compare_candidate_A");
+            if (prefill) {
+                prefilledCandidate = JSON.parse(prefill) as Candidate;
+                preselectedId = prefilledCandidate.id;
+                localStorage.removeItem("compare_candidate_A");
+            }
+        } catch {
+            // ignore bad JSON
+        }
+
+        // --- Load candidate list ---
+        let list: Candidate[] = [];
         try {
             const stored = localStorage.getItem("candidates");
             if (stored) {
                 const parsed = JSON.parse(stored);
                 if (Array.isArray(parsed) && parsed.length > 0) {
-                    setCandidates(parsed);
-                    return;
+                    list = parsed;
                 }
             }
         } catch {
             // ignore
         }
 
-        // Fallback mock data
-        const mock1 = getMockCandidate();
-        const mock2 = {
-            ...getMockCandidate(),
-            id: "compare-mock-2",
-            name: "Sarah Connor",
-            score: 92,
-            authenticityLevel: "High" as const,
-            skills: { frontend: 9, backend: 7, dsa: 6, system: 5, testing: 8 },
-            strengths: [
-                "Exceptional frontend architecture skills",
-                "Strong testing habits with high coverage",
-                "Active open-source contributor",
-                "Clean, well-documented code",
-            ],
-            weaknesses: [
-                "Limited system design experience",
-                "No DevOps or cloud exposure",
-            ],
-            risks: [
-                "May need training on distributed systems",
-            ],
-        };
-        const mock3 = {
-            ...getMockCandidate(),
-            id: "compare-mock-3",
-            name: "John Doe",
-            score: 45,
-            authenticityLevel: "Low" as const,
-            skills: { frontend: 3, backend: 6, dsa: 4, system: 7, testing: 2 },
-            strengths: [
-                "Good backend fundamentals",
-                "Experience with microservices",
-            ],
-            weaknesses: [
-                "Weak frontend skills",
-                "Minimal testing in projects",
-                "Inconsistent commit history",
-            ],
-            risks: [
-                "Questionable project originality",
-                "Low code contribution depth",
-            ],
-        };
-        setCandidates([mock1, mock2, mock3]);
+        if (list.length === 0) {
+            // Fallback mock data
+            const mock1 = getMockCandidate();
+            const mock2 = {
+                ...getMockCandidate(),
+                id: "compare-mock-2",
+                name: "Sarah Connor",
+                score: 92,
+                authenticityLevel: "High" as const,
+                skills: { frontend: 9, backend: 7, dsa: 6, system: 5, testing: 8 },
+                strengths: [
+                    "Exceptional frontend architecture skills",
+                    "Strong testing habits with high coverage",
+                    "Active open-source contributor",
+                    "Clean, well-documented code",
+                ],
+                weaknesses: [
+                    "Limited system design experience",
+                    "No DevOps or cloud exposure",
+                ],
+                risks: [
+                    "May need training on distributed systems",
+                ],
+            };
+            const mock3 = {
+                ...getMockCandidate(),
+                id: "compare-mock-3",
+                name: "John Doe",
+                score: 45,
+                authenticityLevel: "Low" as const,
+                skills: { frontend: 3, backend: 6, dsa: 4, system: 7, testing: 2 },
+                strengths: [
+                    "Good backend fundamentals",
+                    "Experience with microservices",
+                ],
+                weaknesses: [
+                    "Weak frontend skills",
+                    "Minimal testing in projects",
+                    "Inconsistent commit history",
+                ],
+                risks: [
+                    "Questionable project originality",
+                    "Low code contribution depth",
+                ],
+            };
+            list = [mock1, mock2, mock3];
+        }
+
+        // Merge prefilled candidate into list if not already present
+        if (prefilledCandidate && !list.some((c) => c.id === prefilledCandidate!.id)) {
+            list = [prefilledCandidate, ...list];
+        }
+
+        setCandidates(list);
+
+        // Auto-select Candidate A if prefilled
+        if (preselectedId) {
+            setSelectedA(preselectedId);
+        }
     }, []);
 
     const candidateA = candidates.find((c) => c.id === selectedA) ?? null;

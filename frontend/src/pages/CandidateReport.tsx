@@ -1,11 +1,19 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import type { Candidate, Skills, TopRepo } from "../types/candidate";
+import type { Candidate, TopRepo } from "../types/candidate";
 import { API } from "../lib/api";
 
 // Existing report sections
 import InterviewSection from "../components/report/InterviewSection";
 import AssessmentSection from "../components/report/AssessmentSection";
+
+// Enhanced authenticity intelligence sections
+import AuthenticityHeader from "../components/report/AuthenticityHeader";
+import ScoreBreakdownPanel from "../components/report/ScoreBreakdownPanel";
+import EvidenceSignalsPanel from "../components/report/EvidenceSignalsPanel";
+import GitHubBehaviorInsights from "../components/report/GitHubBehaviorInsights";
+import VisualHighlightBadges from "../components/report/VisualHighlightBadges";
+import SkillRadarChart from "../components/report/SkillRadarChart";
 
 /* ═══════════════════════════════════════
    UTILITY HELPERS
@@ -158,8 +166,8 @@ function ProfileHeader({ c }: { c: Candidate }) {
                                 {riskLabel(c.score)}
                             </span>
                             <span className={`px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider border ${c.authenticityLevel === "High" ? "bg-emerald-500/15 text-emerald-400 border-emerald-500/30" :
-                                    c.authenticityLevel === "Medium" ? "bg-amber-500/15 text-amber-400 border-amber-500/30" :
-                                        "bg-red-500/15 text-red-400 border-red-500/30"
+                                c.authenticityLevel === "Medium" ? "bg-amber-500/15 text-amber-400 border-amber-500/30" :
+                                    "bg-red-500/15 text-red-400 border-red-500/30"
                                 }`}>
                                 {c.authenticityLevel} Auth
                             </span>
@@ -201,39 +209,8 @@ function RepoInsights({ c }: { c: Candidate }) {
     );
 }
 
-/* ═══════════════════════════════════════
-   3. LANGUAGE / SKILL CHART
-   ═══════════════════════════════════════ */
-function SkillChart({ skills }: { skills: Skills }) {
-    const entries = (Object.entries(skills) as [string, number][]).sort((a, b) => b[1] - a[1]);
-    const labels: Record<string, string> = { frontend: "Frontend", backend: "Backend", dsa: "DSA", system: "System Design", testing: "Testing" };
-    const colors: Record<string, string> = { frontend: "#a78bfa", backend: "#60a5fa", dsa: "#f472b6", system: "#34d399", testing: "#fbbf24" };
 
-    return (
-        <div className="rounded-2xl bg-white/[0.03] border border-white/[0.08] p-6">
-            <h3 className="text-sm font-semibold text-white mb-5 flex items-center gap-2">
-                <svg className="w-4 h-4 text-purple-400" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" /></svg>
-                Skill Breakdown
-            </h3>
-            <div className="space-y-4">
-                {entries.map(([key, val]) => (
-                    <div key={key}>
-                        <div className="flex items-center justify-between mb-1.5">
-                            <span className="text-xs text-white/60 font-medium">{labels[key] ?? key}</span>
-                            <span className="text-xs text-white/40">{val}/10</span>
-                        </div>
-                        <div className="h-2.5 bg-white/[0.06] rounded-full overflow-hidden">
-                            <div
-                                className="h-full rounded-full transition-all duration-700"
-                                style={{ width: `${val * 10}%`, backgroundColor: colors[key] ?? "#8b8b8b" }}
-                            />
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
-}
+
 
 /* ═══════════════════════════════════════
    4. TOP REPOSITORIES LIST
@@ -324,8 +301,8 @@ function AuthenticityCard({ c }: { c: Candidate }) {
                     <div className="flex items-center gap-2">
                         <span className={`px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider ${rc.bg} ${rc.text} ${rc.border} border`}>{riskLabel(c.score)}</span>
                         <span className={`px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider ${c.authenticityLevel === "High" ? "bg-emerald-500/15 text-emerald-400 border border-emerald-500/30" :
-                                c.authenticityLevel === "Medium" ? "bg-amber-500/15 text-amber-400 border border-amber-500/30" :
-                                    "bg-red-500/15 text-red-400 border border-red-500/30"
+                            c.authenticityLevel === "Medium" ? "bg-amber-500/15 text-amber-400 border border-amber-500/30" :
+                                "bg-red-500/15 text-red-400 border border-red-500/30"
                             }`}>{c.authenticityLevel} Authenticity</span>
                     </div>
 
@@ -355,11 +332,27 @@ function AuthenticityCard({ c }: { c: Candidate }) {
 /* ═══════════════════════════════════════
    6. RECRUITER ACTIONS
    ═══════════════════════════════════════ */
-function RecruiterActionBar() {
+function RecruiterActionBar({ candidate, onNavigate }: { candidate: Candidate; onNavigate: (path: string) => void }) {
     const [shortlisted, setShortlisted] = useState(false);
     const [toast, setToast] = useState("");
+    const isRecruiter = localStorage.getItem("hireproof_role") !== "candidate";
 
     const showToast = (msg: string) => { setToast(msg); setTimeout(() => setToast(""), 3000); };
+
+    const handleCompare = () => {
+        const comparePayload = {
+            id: candidate.id,
+            name: candidate.name,
+            score: candidate.score,
+            skills: candidate.skills,
+            strengths: candidate.strengths,
+            weaknesses: candidate.weaknesses,
+            authenticityLevel: candidate.authenticityLevel,
+            risks: candidate.risks,
+        };
+        localStorage.setItem("compare_candidate_A", JSON.stringify(comparePayload));
+        onNavigate("/compare");
+    };
 
     return (
         <>
@@ -381,15 +374,17 @@ function RecruiterActionBar() {
                         onClick={() => { setShortlisted(true); showToast("Candidate shortlisted!"); }}
                         disabled={shortlisted}
                         className={`px-5 py-2.5 rounded-xl text-sm font-semibold transition-all cursor-pointer disabled:cursor-default ${shortlisted
-                                ? "bg-emerald-500/15 border border-emerald-500/30 text-emerald-400"
-                                : "bg-gradient-to-r from-emerald-600 to-green-600 text-white hover:from-emerald-500 hover:to-green-500 hover:shadow-lg hover:shadow-emerald-500/25"
+                            ? "bg-emerald-500/15 border border-emerald-500/30 text-emerald-400"
+                            : "bg-gradient-to-r from-emerald-600 to-green-600 text-white hover:from-emerald-500 hover:to-green-500 hover:shadow-lg hover:shadow-emerald-500/25"
                             }`}
                     >
                         {shortlisted ? "✓ Shortlisted" : "⭐ Shortlist"}
                     </button>
-                    <button onClick={() => showToast("Compare feature coming soon!")} className="px-5 py-2.5 rounded-xl text-sm font-semibold border border-white/[0.1] text-white/70 hover:bg-white/[0.05] hover:text-white transition-all cursor-pointer">
-                        ⚖️ Compare
-                    </button>
+                    {isRecruiter && (
+                        <button onClick={handleCompare} className="px-5 py-2.5 rounded-xl text-sm font-semibold border border-white/[0.1] text-white/70 hover:bg-white/[0.05] hover:text-white transition-all cursor-pointer">
+                            ⚖️ Compare
+                        </button>
+                    )}
                     <button onClick={() => showToast("Report exported!")} className="px-5 py-2.5 rounded-xl text-sm font-semibold border border-white/[0.1] text-white/70 hover:bg-white/[0.05] hover:text-white transition-all cursor-pointer">
                         📄 Export
                     </button>
@@ -498,23 +493,38 @@ export default function CandidateReport() {
                 {/* 1. GitHub Profile Header */}
                 <ProfileHeader c={candidate} />
 
-                {/* 2. Repository Insights */}
+                {/* 2. Enhanced Authenticity Header */}
+                <AuthenticityHeader candidate={candidate} />
+
+                {/* 3. Repository Insights */}
                 <RepoInsights c={candidate} />
 
-                {/* 3. Skill Chart  +  5. Authenticity Score */}
+                {/* 4. Skill Radar + Authenticity Score */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                    <SkillChart skills={candidate.skills} />
+                    <SkillRadarChart skills={{ ...candidate.skills, devops: candidate.skills.devops ?? 0 }} />
                     <AuthenticityCard c={candidate} />
                 </div>
 
-                {/* 4. Top Repositories */}
+                {/* 5. Score Breakdown + Evidence Signals */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <ScoreBreakdownPanel score={candidate.score} />
+                    <EvidenceSignalsPanel candidate={candidate} />
+                </div>
+
+                {/* 6. GitHub Behavior Insights + Visual Highlights */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <GitHubBehaviorInsights candidate={candidate} />
+                    <VisualHighlightBadges candidate={candidate} />
+                </div>
+
+                {/* 7. Top Repositories */}
                 <TopReposList repos={candidate.topRepos ?? []} />
 
                 {/* Strengths & Weaknesses */}
                 <StrengthsWeaknesses strengths={candidate.strengths} weaknesses={candidate.weaknesses} />
 
                 {/* 6. Recruiter Actions */}
-                <RecruiterActionBar />
+                <RecruiterActionBar candidate={candidate} onNavigate={navigate} />
 
                 {/* AI Interview Questions */}
                 <InterviewSection
